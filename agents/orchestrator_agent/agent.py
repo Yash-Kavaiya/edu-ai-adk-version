@@ -3,6 +3,10 @@ from essay_evaluator_agent.agent import root_agent as essay_agent
 from simulated_exam_agent.agent import root_agent as exam_agent
 from prompt_builder_agent.agent import root_agent as prompt_agent
 from interdisciplinary_agent.agent import root_agent as inter_agent
+from personal_tutor_agent.agent import root_agent as tutor_agent
+from content_generator_agent.agent import root_agent as content_agent
+from rephraser_agent.agent import root_agent as rephraser_agent
+from progress_tracker_agent import root_agent as tracker_agent
 
 root_agent = Agent(
     name="orchestrator_agent",
