@@ -59,7 +59,9 @@ enem-ai/
 ├── orchestrator/
 │   └── main_orchestrator.py
 ├── frontend/
-│   └── streamlit_app.py
+│   └── public/
+│   └── src/
+│   └── ...
 ├── data/
 │   └── questions_dataset.csv
 ├── README.md
