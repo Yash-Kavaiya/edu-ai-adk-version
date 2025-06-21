@@ -1,4 +1,4 @@
-# 📘 ENEM.AI — Multi-Agent Educational System
+# 📘 Edu.AI — Multi-Agent Educational System
 
 > 📎 [Learn more about the ENEM exam](./about_enem.md)
 
