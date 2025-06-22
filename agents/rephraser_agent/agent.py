@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from .models import RephrasingSuggestion
+from agents.rephraser_agent.models import RephrasingSuggestion
 
 root_agent = Agent(
     name="rephraser_agent",

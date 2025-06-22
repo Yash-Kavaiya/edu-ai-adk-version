@@ -1,6 +1,5 @@
 from google.adk.agents import Agent
-from google.adk.models import GeminiModel
-from .models import Progresso
+from agents.progress_tracker_agent.models import Progresso
 
 root_agent = Agent(
     name="progress_tracker_agent",

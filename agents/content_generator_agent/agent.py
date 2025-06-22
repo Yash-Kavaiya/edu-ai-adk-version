@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from .models import ContentOutput
+from agents.content_generator_agent.models import ContentOutput
 
 root_agent = Agent(
     name="content_generator_agent",

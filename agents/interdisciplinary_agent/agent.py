@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from .models import InterdisciplinaryQuestion
+from agents.interdisciplinary_agent.models import InterdisciplinaryQuestion
 
 root_agent = Agent(
     name="interdisciplinary_agent",

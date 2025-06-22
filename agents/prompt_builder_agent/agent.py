@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from .models import PromptOutput
+from agents.prompt_builder_agent.models import PromptOutput
 
 root_agent = Agent(
     name="prompt_builder_agent",

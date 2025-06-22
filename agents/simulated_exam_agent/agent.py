@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from .models import SimulatedExamOutput
+from agents.simulated_exam_agent.models import SimulatedExamOutput
 
 root_agent = Agent(
     name="simulated_exam_agent",
@@ -31,5 +31,4 @@ Retorne sua resposta no seguinte formato:
   ]
 }
 """,
-    output_schema=SimulatedExamOutput,
 )

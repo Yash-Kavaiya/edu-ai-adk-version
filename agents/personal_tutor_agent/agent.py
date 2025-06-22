@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from .models import TutorRecommendation
+from agents.personal_tutor_agent.models import TutorRecommendation
 
 root_agent = Agent(
     name="personal_tutor_agent",

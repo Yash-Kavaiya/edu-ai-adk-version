@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from .models import EssayEvaluationResult
+from agents.essay_evaluator_agent.models import EssayEvaluationResult
 
 root_agent = Agent(
     name="essay_evaluator_agent",
