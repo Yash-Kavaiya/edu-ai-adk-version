@@ -24,14 +24,17 @@ export class ApiService {
     }
   }
 
-  static createEssayPayload(text: string): RunPayload {
+  static createEssayPayload(subject: string, text: string): RunPayload {
+    const final_text = `
+    The user uploaded an essay with the title/subject: ${subject} and the following text: ${text} and you need to evaluate it.
+    `;
     return {
       app_name: "orchestrator_agent",
       user_id: USER_SESSION.userId,
       session_id: USER_SESSION.sessionId,
       new_message: {
         role: "user",
-        parts: [{ text }],
+        parts: [{ text: final_text }],
       },
     };
   }

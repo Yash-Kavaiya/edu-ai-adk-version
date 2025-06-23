@@ -31,4 +31,5 @@ Retorne sua resposta no seguinte formato:
   ]
 }
 """,
+    output_schema=SimulatedExamOutput,
 )
