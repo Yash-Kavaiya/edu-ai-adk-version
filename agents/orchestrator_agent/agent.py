@@ -8,6 +8,8 @@ from agents.content_generator_agent.agent import root_agent as content_agent
 from agents.rephraser_agent.agent import root_agent as rephraser_agent
 from agents.progress_tracker_agent.agent import root_agent as tracker_agent
 from agents.image_to_essay_agent.agent import root_agent as image_to_essay_agent
+from agents.essay_memory_agent.agent import root_agent as memory_agent
+
 
 root_agent = Agent(
     name="orchestrator_agent",
@@ -26,6 +28,7 @@ Delegate tasks as follows:
 - Didactic content generation → content_generator_agent
 - Assisted rewriting → rephraser_agent
 - Progress tracking and queries → progress_tracker_agent
+- To retrieve or manage past essay evaluations → essay_memory_agent
 
 You must NEVER attempt to answer the user yourself.
 """,
@@ -39,5 +42,6 @@ You must NEVER attempt to answer the user yourself.
         content_agent,
         rephraser_agent,
         tracker_agent,
+        memory_agent
     ]
 )

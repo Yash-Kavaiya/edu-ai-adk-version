@@ -1,6 +1,6 @@
 export default function BackgroundBlur() {
   return (
-    <div className="absolute inset-0 overflow-hidden -z-10 bg-background">
+    <div className="absolute inset-0 overflow-hidden -z-10 bg-background min-h-screen">
       {/* Animated gradient orbs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-600/25 to-cyan-600/25 rounded-full blur-3xl animate-bounce-slow"></div>

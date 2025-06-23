@@ -6,6 +6,7 @@ from agents.essay_evaluator_agent.competencies_grading.competency_III import com
 from agents.essay_evaluator_agent.competencies_grading.competency_IV import competency_IV_grading
 from agents.essay_evaluator_agent.competencies_grading.competency_V import competency_V_grading
 
+
 root_agent = Agent(
     name="essay_evaluator_agent",
     model="gemini-2.5-flash",

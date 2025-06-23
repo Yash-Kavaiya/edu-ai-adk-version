@@ -1,6 +1,6 @@
 import os
 import uvicorn
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 from uuid import uuid4
@@ -9,7 +9,6 @@ from google.adk.sessions import DatabaseSessionService
 from google.adk.runners import Runner
 from agents.orchestrator_agent.agent import root_agent
 from google.genai import types
-
 
 load_dotenv()
 
@@ -78,11 +77,19 @@ async def create_session(user_id: str):
         "user_id": stateful_session.user_id,
         "state": stateful_session.state,
     }
+    
+@app.get("/apps/{app_name}/users/{user_id}/sessions/{session_id}/state")
+async def get_user_state(app_name: str, user_id: str, session_id: str):
+    try:
+        state = await session_service.get_session(app_name=app_name, user_id=user_id, session_id=session_id)
+        return state
+    except Exception as e:
+        raise HTTPException(status_code=404, detail=f"User state not found: {str(e)}")
+    
 
 @app.get("/hello", include_in_schema=True)
 async def root():
   return {"Hello": "World"}
-
 
 if __name__ == "__main__":
     print("Starting FastAPI server...")

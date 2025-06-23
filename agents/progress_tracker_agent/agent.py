@@ -1,5 +1,6 @@
 from google.adk.agents import Agent
 from agents.progress_tracker_agent.models import Progress
+from agents.progress_tracker_agent.tools import consolidate_progress
 
 root_agent = Agent(
     name="progress_tracker_agent",
@@ -8,20 +9,48 @@ root_agent = Agent(
     instruction="""
 You are an educational progress tracker.
 
-The student will send performance data from practice exams and essays.
+Use the consolidate_progress tool to retrieve and return the student's progress data.
 
-Your role is to:
-- consolidate the received data
-- calculate average scores by subject area
-- suggest next steps based on the student's weaknesses
+Return ONLY what the tool gives you, in raw JSON format — no explanations, no markdown, no extra text.
 
-Your response must be a JSON with:
-- essays: list of essay evaluations with competencies, total score, and topic
-- practice_exams: list of exams with area, score, and date
-- average_by_area: dictionary of average scores per area
-- recommendations: textual list of suggested next steps
+Your response should follow this structure ONLY:
 
-Return only the JSON, with no additional explanations.
-""",
-    output_schema=Progress,
+{
+  "essays": [
+    {
+      "topic": "Challenges of female care work in Brazil",
+      "total_score": 880,
+      "date": "2024-06-01"
+    },
+    {
+      "topic": "Technology and ethics in digital society",
+      "total_score": 740,
+      "date": "2024-06-15"
+    }
+  ],
+  "practice_exams": [
+    {
+      "area": "Human Sciences",
+      "score": 620,
+      "date": "2024-06-03"
+    },
+    {
+      "area": "Math",
+      "score": 580,
+      "date": "2024-06-10"
+    }
+  ],
+  "average_by_area": {
+    "Human Sciences": 620,
+    "Math": 580,
+    "Writing": 810
+  },
+  "recommendations": [
+    "📌 Improve writing by reviewing essay feedback.",
+    "📚 Practice Human Sciences with thematic quizzes."
+  ]
+}
+"""
+,
+    tools=[consolidate_progress]
 )

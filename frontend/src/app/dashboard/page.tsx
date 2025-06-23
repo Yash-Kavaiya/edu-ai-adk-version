@@ -143,29 +143,6 @@ export default function Dashboard() {
     },
   ];
 
-  const quickStats = [
-    {
-      label: "AI Agents Available",
-      value: "8",
-      icon: <Bot className="h-5 w-5" />,
-    },
-    {
-      label: "Study Sessions",
-      value: "0",
-      icon: <Calendar className="h-5 w-5" />,
-    },
-    {
-      label: "Essays Evaluated",
-      value: "0",
-      icon: <FileText className="h-5 w-5" />,
-    },
-    {
-      label: "Progress Score",
-      value: "0%",
-      icon: <TrendingUp className="h-5 w-5" />,
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
       <div className="mx-auto px-4 py-8 relative z-10">
@@ -190,21 +167,6 @@ export default function Dashboard() {
             ENEM preparation. Each agent works together to provide personalized,
             comprehensive learning support.
           </p>
-
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
-            {quickStats.map((stat, index) => (
-              <div key={index} className="glass-card p-4 text-center">
-                <div className="flex items-center justify-center mb-2 text-blue-400">
-                  {stat.icon}
-                </div>
-                <div className="text-2xl font-bold text-white mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-white/60 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* AI Agents Grid */}

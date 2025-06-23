@@ -28,9 +28,8 @@ export default function PromptBuilder() {
     try {
       const final_text = `Generate an essay topic about: ${theme}`;
       const payload = ApiService.createPayload(userId, sessionId, final_text);
-      const response: ADKMessage[] = await ApiService.runAgent(payload);
-      console.log(response);
-      const parsed = parseADKResponse<PromptBuilderOutput>(response);
+      const response = await ApiService.runAgent(payload);
+      const parsed = parseADKResponse<PromptBuilderOutput>(response.response);
       setResult(parsed);
     } catch (error) {
       console.error("Error generating theme:", error);

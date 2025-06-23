@@ -64,7 +64,7 @@ export default function InterdisciplinaryPage() {
       const final_text = `Generate an interdisciplinary question about: ${form.area1} and ${form.area2}.`;
       const payload = ApiService.createPayload(userId, sessionId, final_text);
 
-      const data: ADKMessage[] = await ApiService.runAgent(payload);
+      const data = await ApiService.runAgent(payload);
       const parsed = parseADKResponse<InterdisciplinaryQuestion>(data);
 
       if (parsed) {

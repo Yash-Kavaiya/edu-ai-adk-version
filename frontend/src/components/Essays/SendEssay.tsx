@@ -67,6 +67,15 @@ export default function SendEssay() {
       const parsed = parseADKResponse<EssayEvaluationResult>(data.response);
       if (parsed) {
         setResponse(parsed);
+        await ApiService.runAgent(
+          ApiService.createPayload(
+            userId,
+            sessionId,
+            `Use the save_essay_feedback tool with the following data:\n${JSON.stringify(
+              parsed
+            )}`
+          )
+        );
       }
     } catch (error) {
       console.error("Erro ao enviar redação:", error);
@@ -114,6 +123,13 @@ export default function SendEssay() {
                   analysis across all 5 competencies. Upload an image or paste
                   your text to start.
                 </p>
+
+                <Link href="/previous-essays">
+                  <Button className="button-secondary mt-4">
+                    <FileText className="w-4 h-4 mr-2" />
+                    Previous Essays
+                  </Button>
+                </Link>
               </div>
 
               {/* Input form */}
@@ -144,39 +160,106 @@ export default function SendEssay() {
                     />
                   </div>
 
+                  {/* File upload */}
+                  <div className="space-y-2">
+                    <label className="block text-white font-medium flex items-center gap-2">
+                      <Upload className="h-4 w-4 text-purple-400" />
+                      Upload Essay Image
+                    </label>
+                    <div
+                      className={`
+                        border-2 border-dashed rounded-xl text-center transition-all duration-300 relative
+                        ${
+                          file
+                            ? "border-purple-400/50 bg-purple-400/5"
+                            : "border-white/20 hover:border-white/40"
+                        }
+                      `}
+                    >
+                      {file ? (
+                        <div className="p-8 space-y-4">
+                          <div className="flex items-center justify-center gap-2 text-purple-400">
+                            <FileText className="h-8 w-8" />
+                            <span className="font-medium">{file.name}</span>
+                          </div>
+                          <div className="flex items-center justify-center gap-2">
+                            <Button
+                              onClick={() => setFile(null)}
+                              className="button-secondary"
+                            >
+                              Choose Different File
+                            </Button>
+                          </div>
+                        </div>
+                      ) : (
+                        <label className="block cursor-pointer p-8">
+                          <div className="space-y-4">
+                            <div className="flex flex-col items-center gap-2">
+                              <Upload className="h-12 w-12 text-white/40" />
+                              <div className="space-y-1">
+                                <p className="text-white font-medium">
+                                  Drag and drop your file here
+                                </p>
+                                <p className="text-white/50 text-sm">
+                                  or click to browse
+                                </p>
+                              </div>
+                            </div>
+                            <input
+                              type="file"
+                              accept="image/*, application/pdf"
+                              onChange={(e) =>
+                                setFile(e.target.files?.[0] || null)
+                              }
+                              className="hidden"
+                            />
+                            <div className="flex flex-col items-center gap-1">
+                              <p className="text-white/50 text-sm">
+                                Supported formats: JPG, PNG, PDF
+                              </p>
+                              <p className="text-white/50 text-sm">
+                                Maximum file size: 10MB
+                              </p>
+                            </div>
+                          </div>
+                        </label>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="relative">
+                    <div className="absolute inset-0 flex items-center">
+                      <div className="w-full border-t border-white/10"></div>
+                    </div>
+                    <div className="relative flex justify-center text-sm">
+                      <span className="px-2 bg-background text-white/50">
+                        or paste your essay text below
+                      </span>
+                    </div>
+                  </div>
+
                   {/* Essay text */}
                   <div className="space-y-2">
-                    <label className="block text-white font-medium">
+                    <label className="block text-white font-medium flex items-center gap-2">
+                      <PenTool className="h-4 w-4 text-purple-400" />
                       Essay Content
                     </label>
                     <textarea
-                      className="w-full bg-white/5 border border-white/20 rounded-xl p-4 text-white placeholder-white/50 focus:border-white/40 focus:outline-none transition-colors resize-none"
+                      className={`
+                        w-full bg-white/5 border rounded-xl p-4 text-white placeholder-white/50 transition-colors resize-none
+                        ${
+                          file
+                            ? "border-white/10 bg-white/5 cursor-not-allowed"
+                            : "border-white/20 focus:border-white/40 focus:outline-none"
+                        }
+                      `}
                       rows={12}
                       placeholder="Paste your essay here."
                       value={text}
                       onChange={(e) => setText(e.target.value)}
+                      disabled={!!file}
                     />
                   </div>
-
-                  {/* File upload */}
-                  {/*
-                  <div className="space-y-2">
-                    <label className="block text-white font-medium">
-                      Or Upload Image
-                    </label>
-                    <div className="border-2 border-dashed border-white/20 rounded-xl p-8 text-center hover:border-white/40 transition-colors">
-                      <Upload className="h-8 w-8 text-white/40 mx-auto mb-4" />
-                      <input
-                        type="file"
-                        accept=".jpg,.png,.pdf"
-                        onChange={(e) => setFile(e.target.files?.[0] || null)}
-                        className="w-full text-white/70 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-white/10 file:text-white hover:file:bg-white/20"
-                      />
-                      <p className="text-white/50 text-sm mt-2">
-                        Supported formats: JPG, PNG, PDF
-                      </p>
-                    </div>
-                  </div>*/}
 
                   {/* Submit button */}
                   <Button

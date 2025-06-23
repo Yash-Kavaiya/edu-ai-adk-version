@@ -112,7 +112,7 @@ export default function SimulatedExam() {
       const final_text = `The user wants a simulated exam about the topic "${form.topic}" in the area of "${form.subject}" with difficulty "${form.difficulty}" and time of ${form.time} minutes.`;
       const payload = ApiService.createPayload(userId, sessionId, final_text);
 
-      const data: ADKMessage[] = await ApiService.runAgent(payload);
+      const data = await ApiService.runAgent(payload);
       const parsed = parseADKResponse<SimulatedExamResult>(data);
 
       if (parsed && parsed.questions?.length > 0) {
