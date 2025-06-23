@@ -1,21 +1,18 @@
 from pydantic import BaseModel, Field
-from typing import Dict, List
+from typing import List
+
+class Alternativas(BaseModel):
+    A: str
+    B: str
+    C: str
+    D: str
+    E: str
 
 class SimulatedQuestion(BaseModel):
-    pergunta: str = Field(..., description="Enunciado da questão estilo ENEM")
-    alternativas: Dict[str, str] = Field(
-        ..., 
-        description="Dicionário com as alternativas A a E"
-    )
-    resposta_correta: str = Field(
-        ..., 
-        description="Letra da alternativa correta (ex: 'C')",
-        pattern="^[A-E]$"
-    )
-    explicacao: str = Field(..., description="Justificativa para a resposta correta")
-
+    pergunta: str
+    alternativas: Alternativas
+    resposta_correta: str = Field(..., pattern="^[A-E]$")
+    explicacao: str
 
 class SimulatedExamOutput(BaseModel):
-    questoes: List[SimulatedQuestion] = Field(
-        ..., description="Lista de questões geradas no estilo ENEM"
-    )
+    questoes: List[SimulatedQuestion]
