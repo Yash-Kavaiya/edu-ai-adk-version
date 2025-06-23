@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from agents.progress_tracker_agent.models import Progresso
+from agents.progress_tracker_agent.models import Progress
 
 root_agent = Agent(
     name="progress_tracker_agent",
@@ -23,5 +23,5 @@ Your response must be a JSON with:
 
 Return only the JSON, with no additional explanations.
 """,
-    output_schema=Progresso,
+    output_schema=Progress,
 )
