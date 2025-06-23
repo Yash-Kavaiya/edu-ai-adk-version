@@ -128,4 +128,20 @@ export class ApiService {
       },
     };
   }
+
+  static createRephraserPayload(text: string): RunPayload {
+    return {
+      app_name: "orchestrator_agent",
+      user_id: USER_SESSION.userId,
+      session_id: USER_SESSION.sessionId,
+      new_message: {
+        role: "user",
+        parts: [
+          {
+            text: `The user wants to rephrase and improve the following text: ${text}.`,
+          },
+        ],
+      },
+    };
+  }
 }

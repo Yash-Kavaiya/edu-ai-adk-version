@@ -87,7 +87,7 @@ export default function ContentGeneratorPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex gap-4">
+              <div className="flex gap-4 items-center">
                 <input
                   type="text"
                   placeholder="Enter a topic, e.g. World War II"
