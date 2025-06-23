@@ -10,6 +10,13 @@ export function parseADKResponse<T>(response: ADKMessage[]): T | null {
   }
 
   try {
+    // Faça um parse caso o JSON venha começando com ```json
+    if (jsonText.startsWith("```json")) {
+      jsonText = jsonText.slice(7);
+    }
+    if (jsonText.endsWith("```")) {
+      jsonText = jsonText.slice(0, -3);
+    }
     return JSON.parse(jsonText) as T;
   } catch (e) {
     console.error("❌ Error parsing JSON:", e);
