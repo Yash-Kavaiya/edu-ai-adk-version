@@ -27,6 +27,7 @@ export interface RunPayload {
   user_id: string;
   session_id: string;
   new_message: Message;
+  session_state?: Record<string, any>;
 }
 
 // Component Types

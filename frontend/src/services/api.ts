@@ -54,4 +54,31 @@ export class ApiService {
       },
     };
   }
+
+  static createSimulatedExamPayload(options: {
+    tema: string;
+    area: string;
+    dificuldade: string;
+    tempo: number;
+  }): RunPayload {
+    return {
+      app_name: "orchestrator_agent",
+      user_id: USER_SESSION.userId,
+      session_id: USER_SESSION.sessionId,
+      new_message: {
+        role: "user",
+        parts: [
+          {
+            text: `Quero um simulado do ENEM sobre o tema "${options.tema}" na área de "${options.area}" com dificuldade "${options.dificuldade}" e tempo de ${options.tempo} minutos.`,
+          },
+        ],
+      },
+      /*session_state: {
+        tema: options.tema,
+        area: options.area,
+        dificuldade: options.dificuldade,
+        tempo: options.tempo,
+      },*/
+    };
+  }
 }
