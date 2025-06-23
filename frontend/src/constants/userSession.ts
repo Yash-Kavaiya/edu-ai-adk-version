@@ -1,4 +1,4 @@
 export const USER_SESSION = {
   userId: "giovanna",
-  sessionId: "5e4e5ad4-b06c-4096-a9ec-63e22d78bb24",
+  sessionId: "d0ca3678-a3c5-436a-b553-3e8d3fb5d91c",
 };

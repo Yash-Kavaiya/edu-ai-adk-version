@@ -81,4 +81,16 @@ export class ApiService {
       },*/
     };
   }
+
+  static createPromptPayload(theme: string): RunPayload {
+    return {
+      app_name: "orchestrator_agent",
+      user_id: USER_SESSION.userId,
+      session_id: USER_SESSION.sessionId,
+      new_message: {
+        role: "user",
+        parts: [{ text: `Gere um tema de redação sobre: ${theme}` }],
+      },
+    };
+  }
 }

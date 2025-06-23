@@ -1,29 +1,26 @@
 from google.adk.agents import Agent
-from agents.prompt_builder_agent.models import PromptOutput
+from google.adk.tools import agent_tool
+from .sub_agents.search_agent import search_agent
+from .sub_agents.composer_agent import composer_agent
 
 root_agent = Agent(
     name="prompt_builder_agent",
     model="gemini-2.5-flash",
-    description="Gera temas de redação ENEM com contextualização e coletânea motivadora",
+    description="Orquestrador que busca dados e gera proposta de redação",
     instruction="""
-Você é um gerador de temas de redação estilo ENEM.
+Você é um gerador de propostas de redação estilo ENEM.
 
-Receberá como entrada uma área temática (ex: meio ambiente, tecnologia, desigualdade social).
+1. Ao receber uma área temática (como 'tecnologia'), use a ferramenta `search_tool` para buscar dados, citações e contexto histórico/social.
 
-Sua saída deve ser um JSON com os seguintes campos:
-- tema: um título claro e objetivo, como apareceria em uma prova do ENEM.
-- coletanea: um texto motivador com contexto histórico, dados estatísticos ou citações (2 a 3 parágrafos).
-- instrucoes: diretrizes sobre como o aluno pode abordar o tema (ex: “argumente com base em fatos e repertório sociocultural”).
+2. Depois, envie o texto da busca para a ferramenta `composer_agent`, que criará um JSON estruturado com:
+- tema
+- coletaneas (lista de parágrafos)
+- instrucoes
 
-Exemplo de saída:
-
-{
-  "tema": "O papel das redes sociais na construção da opinião pública",
-  "coletanea": "De acordo com pesquisa do DataSenado de 2023, 78% dos jovens brasileiros entre 16 e 24 anos se informam exclusivamente por redes sociais... [continua]",
-  "instrucoes": "Discuta os impactos positivos e negativos das redes sociais na formação de opinião. Utilize argumentos históricos, estatísticos e socioculturais."
-}
-
-Retorne apenas o JSON, sem explicações adicionais.
+Retorne apenas o JSON final do composer_agent.
 """,
-    output_schema=PromptOutput,
+    tools=[
+        agent_tool.AgentTool(agent=search_agent),
+        agent_tool.AgentTool(agent=composer_agent),
+    ],
 )
