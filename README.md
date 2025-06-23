@@ -41,7 +41,7 @@
 
 ## 🗺️ Architecture Diagram
 
-![Architecture Diagram](link-to-pdf-or-image)
+![Architecture Diagram](./docs/Architecture.pdf)
 
 ## 🎥 Demo Video
 

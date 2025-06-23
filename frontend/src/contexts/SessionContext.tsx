@@ -21,20 +21,26 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
     async function init() {
       console.log("Initializing session...");
       let storedUserId = localStorage.getItem("eduai_user_id");
+      let storedSessionId = localStorage.getItem("eduai_session_id");
+
       if (!storedUserId) {
-        console.log("No stored user ID found, generating new one...");
         storedUserId = crypto.randomUUID();
         localStorage.setItem("eduai_user_id", storedUserId);
       }
 
-      const { userId, sessionId } = await ApiService.initializeSession(
-        storedUserId
-      );
+      if (!storedSessionId) {
+        const sessionData = await ApiService.initializeSession(storedUserId);
+        storedSessionId = sessionData.sessionId;
+        localStorage.setItem("eduai_session_id", storedSessionId);
+      }
 
-      console.log("Session initialized:", { userId, sessionId });
+      console.log("Session ready:", {
+        userId: storedUserId,
+        sessionId: storedSessionId,
+      });
 
-      setUserId(userId);
-      setSessionId(sessionId);
+      setUserId(storedUserId);
+      setSessionId(storedSessionId);
     }
 
     init();
