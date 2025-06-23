@@ -1,4 +1,5 @@
 export interface EssayEvaluationResult {
+  extracted_essay: string;
   comp1_score: number;
   comp2_score: number;
   comp3_score: number;

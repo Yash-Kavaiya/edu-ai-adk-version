@@ -38,15 +38,17 @@ export class ApiService {
 
   static createImagePayload(imageUrl: string): RunPayload {
     return {
-      app_name: "image_to_essay_agent",
+      app_name: "orchestrator_agent",
       user_id: USER_SESSION.userId,
       session_id: USER_SESSION.sessionId,
       new_message: {
         role: "user",
-        parts: [{ text: imageUrl }],
+        parts: [
+          {
+            text: `The user uploaded an essay as image with the following URL: ${imageUrl} and you need to evaluate it.`,
+          },
+        ],
       },
     };
   }
 }
-
-// Types are now exported from @/types

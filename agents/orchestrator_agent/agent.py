@@ -7,6 +7,7 @@ from personal_tutor_agent.agent import root_agent as tutor_agent
 from content_generator_agent.agent import root_agent as content_agent
 from rephraser_agent.agent import root_agent as rephraser_agent
 from progress_tracker_agent.agent import root_agent as tracker_agent
+from image_to_essay_agent.agent import root_agent as image_to_essay_agent
 
 root_agent = Agent(
     name="orchestrator_agent",
@@ -16,7 +17,8 @@ root_agent = Agent(
 Você é um orquestrador inteligente. Sua função é entender a intenção do aluno
 e delegar a tarefa ao agente especializado mais apropriado.
 Delegue as tarefas da seguinte forma:
-- Correção de redação → essay_evaluator_agent
+- Correção de redação textual → essay_evaluator_agent
+- Correção de redação de imagem → image_to_essay_agent (depois de realizar o OCR, você deve enviar a redação para o essay_evaluator_agent)
 - Geração de simulado → simulated_exam_agent
 - Geração de tema de redação → prompt_builder_agent
 - Questão interdisciplinar → interdisciplinary_agent
@@ -28,6 +30,7 @@ Você NUNCA deve tentar responder por conta própria.
 
 """,
     sub_agents=[
+        image_to_essay_agent,
         essay_agent,
         exam_agent,
         prompt_agent,

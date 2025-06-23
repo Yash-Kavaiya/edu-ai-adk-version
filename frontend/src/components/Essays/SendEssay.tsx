@@ -7,6 +7,7 @@ import { ADKMessage } from "@/types/ADKMessage";
 import { parseADKResponse } from "@/utils/parseADKResponse";
 
 export default function SendEssay() {
+  const [essayMainSubject, setEssayMainSubject] = useState("");
   const [text, setText] = useState("");
   const [file, setFile] = useState<File | null>(null);
   const [response, setResponse] = useState<EssayEvaluationResult | null>(null);
@@ -48,6 +49,15 @@ export default function SendEssay() {
   return (
     <main className="p-6 max-w-xl mx-auto space-y-4">
       <h1 className="text-2xl font-bold">Correção de Redação ENEM</h1>
+
+      <label className="block font-medium">Tema da redação</label>
+      <input
+        type="text"
+        className="w-full border p-2 rounded"
+        placeholder="Tema da redação"
+        value={essayMainSubject}
+        onChange={(e) => setEssayMainSubject(e.target.value)}
+      />
 
       <label className="block font-medium">Redação (Texto ou Arquivo)</label>
 
