@@ -24,6 +24,7 @@ Generate between 3 and 5 questions following these guidelines:
 - DO NOT include any fields other than: question, alternatives, correct_answer, and explanation.
 - DO NOT add comments, tips, or extra fields.
 - Only respond with the JSON in the specified format.
+- Generate in english.
 
 {
   "questions": [

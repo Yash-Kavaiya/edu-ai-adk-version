@@ -208,24 +208,24 @@ export default function SimulatedExam() {
 
   if (quizState === "loading") {
     return (
-      <div className="min-h-screen bg-background relative overflow-hidden">
-        <div className="mx-auto px-4 py-8 relative z-10">
+      <div className="min-h-screen bg-background relative overflow-hidden flex items-center justify-center">
+        <div className="w-full relative z-10">
           <BackgroundBlur />
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-center space-y-6"
+            className="text-center space-y-8 max-w-lg mx-auto px-4"
           >
             <div className="relative">
-              <div className="w-16 h-16 border-4 border-primary/30 rounded-full animate-spin border-t-primary mx-auto"></div>
-              <Brain className="w-8 h-8 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+              <div className="w-20 h-20 border-4 border-primary/30 rounded-full animate-spin border-t-primary mx-auto"></div>
+              <Brain className="w-10 h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-white">
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <h2 className="text-3xl font-bold text-white">
                   Generating your exam...
                 </h2>
-                <p className="text-white/70">
+                <p className="text-lg text-white/70">
                   Our AI is creating personalized questions for you
                 </p>
               </div>
@@ -403,14 +403,14 @@ export default function SimulatedExam() {
       ((currentQuestionIndex + 1) / questions.questions.length) * 100;
 
     return (
-      <div className="min-h-screen bg-background relative overflow-hidden">
-        <div className="mx-auto px-4 py-8 relative z-10">
+      <div className="min-h-screen bg-background relative overflow-hidden flex flex-col">
+        <div className="w-full relative z-10 flex-1 flex flex-col">
           <BackgroundBlur />
           {/* Timer and Progress Header */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center justify-between mb-8 p-4 glass-card border-white/10 rounded-lg max-w-4xl mx-auto"
+            className="flex items-center justify-between p-4 glass-card border-white/10 rounded-lg max-w-4xl mx-auto w-full mt-8 px-4"
           >
             <div className="flex items-center gap-4">
               <Link href="/dashboard">
@@ -462,9 +462,9 @@ export default function SimulatedExam() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -50 }}
             transition={{ duration: 0.3 }}
-            className="max-w-4xl mx-auto"
+            className="flex-1 flex items-center max-w-4xl mx-auto w-full px-4 py-8"
           >
-            <Card className="glass-card border-white/10">
+            <Card className="glass-card border-white/10 w-full">
               <CardHeader>
                 <CardTitle className="text-xl text-white leading-relaxed">
                   {currentQuestion.question}

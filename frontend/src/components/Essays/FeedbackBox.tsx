@@ -78,7 +78,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
   };
 
   return (
-    <div className="max-w-7xl space-y-8">
+    <div className="space-y-8">
       {/* Header with total score */}
       <div className="glass-card p-8 text-center">
         <div className="flex items-center justify-center mb-4">

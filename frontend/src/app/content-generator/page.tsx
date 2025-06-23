@@ -31,8 +31,9 @@ export default function ContentGeneratorPage() {
     setResult(null);
     try {
       const payload = ApiService.createContentGeneratorPayload(topic);
-      const messages = await ApiService.runAgent(payload);
-      const parsed = parseADKResponse<ContentResponse>(messages);
+      const response = await ApiService.runAgent(payload);
+      console.log(response);
+      const parsed = parseADKResponse<ContentResponse>(response);
       setResult(parsed);
     } catch (err) {
       alert("Failed to generate content.");

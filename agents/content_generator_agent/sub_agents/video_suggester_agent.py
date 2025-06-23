@@ -9,7 +9,7 @@ video_suggester_agent = Agent(
     instruction="""
 You are a research assistant that finds real YouTube videos on a given topic.
 
-Use the `google_search` tool to perform a real search. Do NOT invent links or give incomplete links.
+Use the `google_search` tool to perform a real search. Do NOT invent links or give incomplete links, neither non-available videos.
 
 Filter results to return only actual YouTube videos related to the topic.
 

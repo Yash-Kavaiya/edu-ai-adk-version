@@ -81,7 +81,7 @@ export default function SendEssay() {
         </div>
 
         {/* Main content */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           {!response ? (
             /* Essay input form */
             <div className="space-y-8">
@@ -206,7 +206,7 @@ export default function SendEssay() {
                   </span>
                 </div>
 
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tighter mb-4 text-white">
+                <h2 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-white">
                   Your Essay
                   <br />
                   <span className="gradient-text">Results</span>
