@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { rethinkSans } from "@/utils/fonts";
+import { SessionProvider } from "@/contexts/SessionContext";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${rethinkSans.variable} antialiased`}>{children}</body>
+      <body className={`${rethinkSans.variable} antialiased`}>
+        <SessionProvider>{children}</SessionProvider>
+      </body>
     </html>
   );
 }

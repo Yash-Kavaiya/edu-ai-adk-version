@@ -20,17 +20,20 @@ import {
 } from "lucide-react";
 import { ContentResponse } from "@/types/ContentResponse";
 import { motion } from "@/components/ui/motion";
+import { useSession } from "@/contexts/SessionContext";
 
 export default function ContentGeneratorPage() {
   const [topic, setTopic] = useState("");
   const [result, setResult] = useState<ContentResponse | null>(null);
   const [loading, setLoading] = useState(false);
+  const { userId, sessionId } = useSession();
 
   const handleGenerate = async () => {
     setLoading(true);
     setResult(null);
     try {
-      const payload = ApiService.createContentGeneratorPayload(topic);
+      const final_text = `The user wants an explanation about: ${topic}.`;
+      const payload = ApiService.createPayload(userId, sessionId, final_text);
       const response = await ApiService.runAgent(payload);
       console.log(response);
       const parsed = parseADKResponse<ContentResponse>(response);

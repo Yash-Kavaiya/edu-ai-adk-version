@@ -1,4 +1,5 @@
 from google.adk.agents import Agent
+from google.adk.tools import agent_tool
 from tools.save_uploaded_file import save_uploaded_file
 from tools.upload_file_to_bucket import upload_file_to_bucket
 from tools.extract_text_from_image import extract_text_from_image
@@ -19,7 +20,7 @@ You will receive an image submitted by the student. Follow these steps:
     tools=[
         save_uploaded_file,
         upload_file_to_bucket,
-        extract_text_from_image
+        extract_text_from_image,
+        agent_tool.AgentTool(agent=essay_agent),
     ],
-    sub_agents=[essay_agent]
 )

@@ -24,6 +24,7 @@ import {
   Target,
   PenTool,
 } from "lucide-react";
+import { useSession } from "@/contexts/SessionContext";
 import BackgroundBlur from "../ui/background-blur";
 
 export default function SendEssay() {
@@ -32,6 +33,14 @@ export default function SendEssay() {
   const [file, setFile] = useState<File | null>(null);
   const [response, setResponse] = useState<EssayEvaluationResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const { userId, sessionId } = useSession();
+
+  function resetEssay() {
+    setResponse(null);
+    setEssayMainSubject("");
+    setText("");
+    setFile(null);
+  }
 
   const handleEnviar = async () => {
     if (!text.trim() && !file) {
@@ -46,16 +55,16 @@ export default function SendEssay() {
 
       if (file) {
         // Se for imagem, simula envio com URL mockada (em vez de upload real por enquanto)
-        payload = ApiService.createImagePayload(
-          "https://storage.googleapis.com/edu-ai-essays/essay_01.jpg"
-        );
+        const final_text = `The user uploaded an essay as image with the following URL: https://storage.googleapis.com/edu-ai-essays/essay_01.jpg and you need to evaluate it.`;
+        payload = ApiService.createPayload(userId, sessionId, final_text);
       } else {
         // Se for texto direto
-        payload = ApiService.createEssayPayload(essayMainSubject, text);
+        const final_text = `The user uploaded an essay with the title/subject: ${essayMainSubject} and the following text: ${text} and you need to evaluate it.`;
+        payload = ApiService.createPayload(userId, sessionId, final_text);
       }
 
-      const data: ADKMessage[] = await ApiService.runAgent(payload);
-      const parsed = parseADKResponse<EssayEvaluationResult>(data);
+      const data = await ApiService.runAgent(payload);
+      const parsed = parseADKResponse<EssayEvaluationResult>(data.response);
       if (parsed) {
         setResponse(parsed);
       }
@@ -214,7 +223,7 @@ export default function SendEssay() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
-                    onClick={() => setResponse(null)}
+                    onClick={() => resetEssay()}
                     variant="outline"
                     className="button-secondary"
                   >

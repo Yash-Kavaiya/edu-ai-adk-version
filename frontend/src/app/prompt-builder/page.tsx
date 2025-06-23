@@ -11,11 +11,13 @@ import { ADKMessage } from "@/types/ADKMessage";
 import { parseADKResponse } from "@/utils/parseADKResponse";
 import BackgroundBlur from "@/components/ui/background-blur";
 import { motion } from "@/components/ui/motion";
+import { useSession } from "@/contexts/SessionContext";
 
 export default function PromptBuilder() {
   const [theme, setTheme] = useState("");
   const [result, setResult] = useState<PromptBuilderOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const { userId, sessionId } = useSession();
 
   const handleGeneratePrompt = async () => {
     if (!theme.trim()) return;
@@ -24,7 +26,8 @@ export default function PromptBuilder() {
     setResult(null);
 
     try {
-      const payload = ApiService.createPromptPayload(theme);
+      const final_text = `Generate an essay topic about: ${theme}`;
+      const payload = ApiService.createPayload(userId, sessionId, final_text);
       const response: ADKMessage[] = await ApiService.runAgent(payload);
       console.log(response);
       const parsed = parseADKResponse<PromptBuilderOutput>(response);

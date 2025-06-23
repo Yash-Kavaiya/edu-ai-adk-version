@@ -24,8 +24,8 @@ export interface Message {
 
 export interface RunPayload {
   app_name: string;
-  user_id: string;
-  session_id: string;
+  user_id: string | null;
+  session_id: string | null;
   new_message: Message;
   session_state?: Record<string, any>;
 }

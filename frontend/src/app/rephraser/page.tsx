@@ -18,17 +18,20 @@ import {
   CheckCircle,
   Lightbulb,
 } from "lucide-react";
+import { useSession } from "@/contexts/SessionContext";
 
 export default function RephraserPage() {
   const [inputText, setInputText] = useState("");
   const [result, setResult] = useState<RephrasingSuggestion | null>(null);
   const [loading, setLoading] = useState(false);
+  const { userId, sessionId } = useSession();
 
   const handleRephrase = async () => {
     setLoading(true);
     setResult(null);
     try {
-      const payload = ApiService.createRephraserPayload(inputText);
+      const final_text = `The user wants to rephrase and improve the following text: ${inputText}.`;
+      const payload = ApiService.createPayload(userId, sessionId, final_text);
       const response = await ApiService.runAgent(payload);
       const parsed = parseADKResponse<RephrasingSuggestion>(response);
       if (parsed) setResult(parsed);

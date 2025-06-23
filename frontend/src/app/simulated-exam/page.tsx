@@ -3,10 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ApiService } from "@/services/api";
-import {
-  SimulatedExamResult,
-  SimulatedQuestion,
-} from "@/types/SimulatedExamResult";
+import { SimulatedExamResult } from "@/types/SimulatedExamResult";
 import { parseADKResponse } from "@/utils/parseADKResponse";
 import { ADKMessage } from "@/types/ADKMessage";
 import { Button } from "@/components/ui/button";
@@ -31,6 +28,7 @@ import {
   Home,
   ArrowLeft,
 } from "lucide-react";
+import { useSession } from "@/contexts/SessionContext";
 
 type QuizState = "form" | "loading" | "quiz" | "results";
 
@@ -65,6 +63,8 @@ export default function SimulatedExam() {
 
   // Stop confirmation state
   const [showStopConfirmation, setShowStopConfirmation] = useState(false);
+
+  const { userId, sessionId } = useSession();
 
   // Timer effect
   useEffect(() => {
@@ -109,12 +109,8 @@ export default function SimulatedExam() {
     setQuizState("loading");
 
     try {
-      const payload = ApiService.createSimulatedExamPayload({
-        topic: form.topic,
-        area: form.subject,
-        difficulty: form.difficulty,
-        time: Number(form.time),
-      });
+      const final_text = `The user wants a simulated exam about the topic "${form.topic}" in the area of "${form.subject}" with difficulty "${form.difficulty}" and time of ${form.time} minutes.`;
+      const payload = ApiService.createPayload(userId, sessionId, final_text);
 
       const data: ADKMessage[] = await ApiService.runAgent(payload);
       const parsed = parseADKResponse<SimulatedExamResult>(data);

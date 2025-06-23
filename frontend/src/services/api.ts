@@ -1,9 +1,37 @@
 import { RunPayload } from "@/types";
-import { USER_SESSION } from "@/constants/userSession";
 
 const BASE_API_URL = "http://localhost:8080";
+const APP_NAME = "orchestrator_agent";
 
 export class ApiService {
+  static async initializeSession(userId: string): Promise<{
+    userId: string;
+    sessionId: string;
+  }> {
+    try {
+      const res = await fetch(`${BASE_API_URL}/initiate-session/${userId}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          user_id: userId,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error(`API request failed: ${res.statusText}`);
+      }
+
+      const data = await res.json();
+      return {
+        userId: data.user_id,
+        sessionId: data.id,
+      };
+    } catch (error) {
+      console.error("Error initializing session:", error);
+      throw error;
+    }
+  }
+
   static async runAgent(payload: RunPayload): Promise<any> {
     console.log("🔄 Sending payload to API:", payload);
     try {
@@ -17,130 +45,27 @@ export class ApiService {
         throw new Error(`API request failed: ${response.statusText}`);
       }
 
-      return await response.json();
+      const data = await response.json();
+      console.log("🔄 Response from API:", data);
+      return data;
     } catch (error) {
       console.error("Error running agent:", error);
       throw error;
     }
   }
 
-  static createEssayPayload(subject: string, text: string): RunPayload {
-    const final_text = `
-    The user uploaded an essay with the title/subject: ${subject} and the following text: ${text} and you need to evaluate it.
-    `;
+  static createPayload(
+    user_id: string | null,
+    session_id: string | null,
+    text: string
+  ): RunPayload {
     return {
       app_name: "orchestrator_agent",
-      user_id: USER_SESSION.userId,
-      session_id: USER_SESSION.sessionId,
+      user_id: user_id,
+      session_id: session_id,
       new_message: {
         role: "user",
-        parts: [{ text: final_text }],
-      },
-    };
-  }
-
-  static createImagePayload(imageUrl: string): RunPayload {
-    return {
-      app_name: "orchestrator_agent",
-      user_id: USER_SESSION.userId,
-      session_id: USER_SESSION.sessionId,
-      new_message: {
-        role: "user",
-        parts: [
-          {
-            text: `The user uploaded an essay as image with the following URL: ${imageUrl} and you need to evaluate it.`,
-          },
-        ],
-      },
-    };
-  }
-
-  static createSimulatedExamPayload(options: {
-    topic: string;
-    area: string;
-    difficulty: string;
-    time: number;
-  }): RunPayload {
-    return {
-      app_name: "orchestrator_agent",
-      user_id: USER_SESSION.userId,
-      session_id: USER_SESSION.sessionId,
-      new_message: {
-        role: "user",
-        parts: [
-          {
-            text: `The user wants a simulated exam about the topic "${options.topic}" in the area of "${options.area}" with difficulty "${options.difficulty}" and time of ${options.time} minutes.`,
-          },
-        ],
-      },
-      /*session_state: {
-        tema: options.tema,
-        area: options.area,
-        dificuldade: options.dificuldade,
-        tempo: options.tempo,
-      },*/
-    };
-  }
-
-  static createPromptPayload(topic: string): RunPayload {
-    return {
-      app_name: "orchestrator_agent",
-      user_id: USER_SESSION.userId,
-      session_id: USER_SESSION.sessionId,
-      new_message: {
-        role: "user",
-        parts: [{ text: `Generate an essay topic about: ${topic}` }],
-      },
-    };
-  }
-
-  static createInterdisciplinaryQuestionPayload(options: {
-    area1: string;
-    area2: string;
-  }): RunPayload {
-    return {
-      app_name: "orchestrator_agent",
-      user_id: USER_SESSION.userId,
-      session_id: USER_SESSION.sessionId,
-      new_message: {
-        role: "user",
-        parts: [
-          {
-            text: `Generate an interdisciplinary question about: ${options.area1} and ${options.area2}.`,
-          },
-        ],
-      },
-    };
-  }
-
-  static createContentGeneratorPayload(topic: string): RunPayload {
-    return {
-      app_name: "orchestrator_agent",
-      user_id: USER_SESSION.userId,
-      session_id: USER_SESSION.sessionId,
-      new_message: {
-        role: "user",
-        parts: [
-          {
-            text: `The user wants an explanation about: ${topic}.`,
-          },
-        ],
-      },
-    };
-  }
-
-  static createRephraserPayload(text: string): RunPayload {
-    return {
-      app_name: "orchestrator_agent",
-      user_id: USER_SESSION.userId,
-      session_id: USER_SESSION.sessionId,
-      new_message: {
-        role: "user",
-        parts: [
-          {
-            text: `The user wants to rephrase and improve the following text: ${text}.`,
-          },
-        ],
+        parts: [{ text: text }],
       },
     };
   }

@@ -25,6 +25,7 @@ import {
   RefreshCw,
   ArrowLeft,
 } from "lucide-react";
+import { useSession } from "@/contexts/SessionContext";
 
 type QuizState = "form" | "loading" | "question" | "answered";
 
@@ -46,6 +47,8 @@ export default function InterdisciplinaryPage() {
   // Loading state
   const [loading, setLoading] = useState(false);
 
+  const { userId, sessionId } = useSession();
+
   const handleFormChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
@@ -58,10 +61,8 @@ export default function InterdisciplinaryPage() {
     setQuizState("loading");
 
     try {
-      const payload = ApiService.createInterdisciplinaryQuestionPayload({
-        area1: form.area1,
-        area2: form.area2,
-      });
+      const final_text = `Generate an interdisciplinary question about: ${form.area1} and ${form.area2}.`;
+      const payload = ApiService.createPayload(userId, sessionId, final_text);
 
       const data: ADKMessage[] = await ApiService.runAgent(payload);
       const parsed = parseADKResponse<InterdisciplinaryQuestion>(data);

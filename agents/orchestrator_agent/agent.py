@@ -1,13 +1,13 @@
 from google.adk.agents import Agent
-from essay_evaluator_agent.agent import root_agent as essay_agent
-from simulated_exam_agent.agent import root_agent as exam_agent
-from prompt_builder_agent.agent import root_agent as prompt_agent
-from interdisciplinary_agent.agent import root_agent as inter_agent
-from personal_tutor_agent.agent import root_agent as tutor_agent
-from content_generator_agent.agent import root_agent as content_agent
-from rephraser_agent.agent import root_agent as rephraser_agent
-from progress_tracker_agent.agent import root_agent as tracker_agent
-from image_to_essay_agent.agent import root_agent as image_to_essay_agent
+from agents.essay_evaluator_agent.agent import root_agent as essay_agent
+from agents.simulated_exam_agent.agent import root_agent as exam_agent
+from agents.prompt_builder_agent.agent import root_agent as prompt_agent
+from agents.interdisciplinary_agent.agent import root_agent as inter_agent
+from agents.personal_tutor_agent.agent import root_agent as tutor_agent
+from agents.content_generator_agent.agent import root_agent as content_agent
+from agents.rephraser_agent.agent import root_agent as rephraser_agent
+from agents.progress_tracker_agent.agent import root_agent as tracker_agent
+from agents.image_to_essay_agent.agent import root_agent as image_to_essay_agent
 
 root_agent = Agent(
     name="orchestrator_agent",
