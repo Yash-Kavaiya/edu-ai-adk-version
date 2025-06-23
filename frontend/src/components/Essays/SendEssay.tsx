@@ -136,8 +136,8 @@ export default function SendEssay() {
                     Submit Your Essay
                   </CardTitle>
                   <CardDescription className="text-white/70">
-                    Enter your essay topic and content below. You can either
-                    type your essay or upload an image.
+                    Enter your essay topic and content below.
+                    {/*You can either type your essay or upload an image.*/}
                   </CardDescription>
                 </CardHeader>
 
@@ -164,13 +164,14 @@ export default function SendEssay() {
                     <textarea
                       className="w-full bg-white/5 border border-white/20 rounded-xl p-4 text-white placeholder-white/50 focus:border-white/40 focus:outline-none transition-colors resize-none"
                       rows={12}
-                      placeholder="Paste your essay here or upload an image below..."
+                      placeholder="Paste your essay here."
                       value={text}
                       onChange={(e) => setText(e.target.value)}
                     />
                   </div>
 
                   {/* File upload */}
+                  {/*
                   <div className="space-y-2">
                     <label className="block text-white font-medium">
                       Or Upload Image
@@ -187,7 +188,7 @@ export default function SendEssay() {
                         Supported formats: JPG, PNG, PDF
                       </p>
                     </div>
-                  </div>
+                  </div>*/}
 
                   {/* Submit button */}
                   <Button

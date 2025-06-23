@@ -135,7 +135,7 @@ const Features = () => {
 
   return (
     <section id="agents" className="w-full py-16 md:py-24 bg-black/10">
-      <div className="container px-4 md:px-6">
+      <div className="px-4 md:px-6">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <div className="inline-flex items-center justify-center px-4 py-2 mb-6 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
             <Bot className="w-4 h-4 mr-2 text-blue-400" />

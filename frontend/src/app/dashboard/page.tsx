@@ -167,7 +167,7 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="mx-auto px-4 py-8 relative z-10">
         {/* Header Section */}
         {/* Enhanced animated background with floating gradient orbs */}
         <div className="absolute inset-0 overflow-hidden -z-10 bg-background">

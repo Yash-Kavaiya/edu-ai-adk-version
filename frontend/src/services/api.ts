@@ -93,4 +93,23 @@ export class ApiService {
       },
     };
   }
+
+  static createInterdisciplinaryQuestionPayload(options: {
+    area1: string;
+    area2: string;
+  }): RunPayload {
+    return {
+      app_name: "orchestrator_agent",
+      user_id: USER_SESSION.userId,
+      session_id: USER_SESSION.sessionId,
+      new_message: {
+        role: "user",
+        parts: [
+          {
+            text: `Gere uma questão interdisciplinar sobre: ${options.area1} e ${options.area2}.`,
+          },
+        ],
+      },
+    };
+  }
 }

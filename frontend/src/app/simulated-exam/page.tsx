@@ -356,7 +356,7 @@ export default function SimulatedExam() {
                       <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
                     </Button>
 
-                    <Link href="/">
+                    <Link href="/dashboard">
                       <Button
                         type="button"
                         variant="outline"
