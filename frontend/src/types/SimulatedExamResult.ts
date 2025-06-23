@@ -1,16 +1,16 @@
 export type SimulatedQuestion = {
-  pergunta: string;
-  alternativas: {
+  question: string;
+  alternatives: {
     A: string;
     B: string;
     C: string;
     D: string;
     E: string;
   };
-  resposta_correta: "A" | "B" | "C" | "D" | "E";
-  explicacao: string;
+  correct_answer: "A" | "B" | "C" | "D" | "E";
+  explanation: string;
 };
 
 export type SimulatedExamResult = {
-  questoes: SimulatedQuestion[];
+  questions: SimulatedQuestion[];
 };

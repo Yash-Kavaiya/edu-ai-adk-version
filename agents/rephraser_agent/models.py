@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 
 class RephrasingSuggestion(BaseModel):
-    original: str = Field(..., description="Texto original enviado pelo aluno")
-    reescrita: str = Field(..., description="Sugestão de reescrita aprimorada")
-    explicacao: str = Field(..., description="Explicação clara sobre as melhorias feitas")
+    original: str = Field(..., description="Original text submitted by the student")
+    rewritten: str = Field(..., description="Improved rewrite suggestion")
+    explanation: str = Field(..., description="Clear explanation of the improvements made")

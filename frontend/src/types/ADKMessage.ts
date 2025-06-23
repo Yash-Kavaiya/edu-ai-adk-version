@@ -4,7 +4,6 @@ export interface ADKMessage {
     role: "user" | "model";
     parts: {
       text?: string;
-      // outros tipos: functionCall, functionResponse etc.
     }[];
   };
   timestamp: number;

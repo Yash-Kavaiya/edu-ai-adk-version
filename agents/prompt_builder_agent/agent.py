@@ -6,18 +6,18 @@ from .sub_agents.composer_agent import composer_agent
 root_agent = Agent(
     name="prompt_builder_agent",
     model="gemini-2.5-flash",
-    description="Orquestrador que busca dados e gera proposta de redação",
+    description="Orchestrator that gathers data and generates ENEM-style essay prompts",
     instruction="""
-Você é um gerador de propostas de redação estilo ENEM.
+You are a generator of ENEM-style essay prompts.
 
-1. Ao receber uma área temática (como 'tecnologia'), use a ferramenta `search_tool` para buscar dados, citações e contexto histórico/social.
+1. When given a thematic area (such as 'technology'), use the `search_tool` to gather data, quotes, and historical/social context.
 
-2. Depois, envie o texto da busca para a ferramenta `composer_agent`, que criará um JSON estruturado com:
-- tema
-- coletaneas (lista de parágrafos)
-- instrucoes
+2. Then, send the search result to the `composer_agent` tool, which will generate a structured JSON with:
+- topic
+- source_texts (list of contextual paragraphs)
+- instructions
 
-Retorne apenas o JSON final do composer_agent.
+Return only the final JSON produced by composer_agent.
 """,
     tools=[
         agent_tool.AgentTool(agent=search_agent),

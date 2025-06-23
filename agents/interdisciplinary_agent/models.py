@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 
-class Alternativas(BaseModel):
+class Alternatives(BaseModel):
     A: str
     B: str
     C: str
@@ -8,7 +8,7 @@ class Alternativas(BaseModel):
     E: str
 
 class InterdisciplinaryQuestion(BaseModel):
-    pergunta: str = Field(..., description="Enunciado da questão interdisciplinar")
-    alternativas: Alternativas = Field(..., description="Alternativas A–E")
-    resposta_correta: str = Field(..., pattern="^[A-E]$", description="Letra da resposta correta")
-    explicacao: str = Field(..., description="Explicação para a resposta correta, considerando a interdisciplinaridade")
+    question: str = Field(..., description="The question prompt")
+    alternatives: Alternatives = Field(..., description="Answer choices A–E")
+    correct_answer: str = Field(..., pattern="^[A-E]$", description="Letter of the correct answer")
+    explanation: str = Field(..., description="Explanation for the correct answer, highlighting the interdisciplinary reasoning")

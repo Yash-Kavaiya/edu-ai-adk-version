@@ -24,6 +24,7 @@ import {
   Target,
   PenTool,
 } from "lucide-react";
+import BackgroundBlur from "../ui/background-blur";
 
 export default function SendEssay() {
   const [essayMainSubject, setEssayMainSubject] = useState("");
@@ -68,35 +69,13 @@ export default function SendEssay() {
 
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Animated background similar to landing page */}
-      <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-600/15 to-cyan-600/15 rounded-full blur-3xl animate-bounce-slow"></div>
-        <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-r from-indigo-600/20 to-purple-700/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-40 right-10 w-64 h-64 bg-gradient-to-r from-pink-600/25 to-rose-600/25 rounded-full blur-3xl animate-float-reverse"></div>
-        <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-      </div>
-
-      <div className="container mx-auto px-4 py-8 relative z-10">
-        {/* Header with back button */}
+      <div className="mx-auto px-4 py-8 relative z-10">
+        <BackgroundBlur />
         <div className="flex items-center justify-between mb-8">
           <Link href="/dashboard">
-            <Button
-              variant="outline"
-              className="button-secondary flex items-center gap-2"
-            >
+            <Button className="button-secondary flex items-center gap-2">
               <ArrowLeft className="h-4 w-4" />
-              Voltar à Página Inicial
-            </Button>
-          </Link>
-
-          <Link href="/dashboard">
-            <Button
-              variant="outline"
-              className="button-secondary flex items-center gap-2"
-            >
-              <Bot className="h-4 w-4" />
-              Dashboard
+              Back to Home
             </Button>
           </Link>
         </div>

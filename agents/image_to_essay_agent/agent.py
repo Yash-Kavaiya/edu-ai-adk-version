@@ -7,14 +7,14 @@ from agents.essay_evaluator_agent.agent import root_agent as essay_agent
 root_agent = Agent(
     name="image_to_essay_agent",
     model="gemini-2.5-flash",
-    description="Extrai redação de imagem e envia para correção automática",
+    description="Extracts essay text from an image and sends it for automatic evaluation",
     instruction="""
-Você recebe uma imagem enviada pelo aluno. Faça o seguinte:
-1. Use `save_uploaded_file(data, file_name)` para salvar localmente.
-2. Use `upload_file_to_bucket(file_path, file_name)` para subir no GCS.
-3. Use `extract_text_from_image(url)` para OCR.
-4. Envie o texto para `essay_evaluator_agent`.
-5. Retorne a nota e feedback.
+You will receive an image submitted by the student. Follow these steps:
+1. Use `save_uploaded_file(data, file_name)` to save the image locally.
+2. Use `upload_file_to_bucket(file_path, file_name)` to upload the image to GCS (Google Cloud Storage).
+3. Use `extract_text_from_image(url)` to extract the text via OCR.
+4. Send the extracted text to `essay_evaluator_agent`.
+5. Return the score and feedback.
 """,
     tools=[
         save_uploaded_file,

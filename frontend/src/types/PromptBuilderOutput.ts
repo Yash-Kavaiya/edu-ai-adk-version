@@ -1,5 +1,5 @@
 export interface PromptBuilderOutput {
-  tema: string;
-  coletaneas: string[];
-  instrucoes: string;
+  topic: string;
+  source_texts: string[];
+  instructions: string;
 }

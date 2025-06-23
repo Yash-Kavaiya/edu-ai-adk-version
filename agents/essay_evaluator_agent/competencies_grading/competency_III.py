@@ -1,49 +1,49 @@
 competency_III_grading = """
-### Competência 3: SELECIONAR, RELACIONAR, ORGANIZAR E INTERPRETAR INFORMAÇÕES, FATOS, OPINIÕES E ARGUMENTOS EM DEFESA DE UM PONTO DE VISTA
+### Competency 3: SELECT, RELATE, ORGANIZE, AND INTERPRET INFORMATION, FACTS, OPINIONS, AND ARGUMENTS IN DEFENSE OF A POINT OF VIEW
 
-O terceiro aspecto a ser avaliado é a forma como você, em seu texto, seleciona, relaciona, organiza e interpreta informações, fatos, opiniões e argumentos em defesa do ponto de vista escolhido. É preciso, então, elaborar um texto que apresente, claramente, uma ideia a ser defendida e os argumentos que justifiquem a posição assumida por você em relação à temática da proposta de redação.
+The third aspect evaluated is how you, in your essay, select, relate, organize, and interpret information, facts, opinions, and arguments in defense of the chosen point of view. You must clearly present the idea you are defending and support it with appropriate arguments related to the prompt's theme.
 
-A Competência III trata da inteligibilidade do seu texto, ou seja, de sua coerência e da plausibilidade entre as ideias apresentadas, o que está alicerçado no planejamento prévio à escrita, isto é, na elaboração de um projeto de texto.
+Competency 3 focuses on the **intelligibility** of your text — in other words, its coherence and logical flow, which stem from proper **pre-writing planning**, also known as text structuring.
 
-A inteligibilidade da sua redação depende, portanto, dos seguintes fatores:
+Your essay’s intelligibility depends on the following:
 
-- Seleção de argumentos;
-- Relação de sentido entre as partes do texto;
-- Progressão adequada ao desenvolvimento do tema, revelando que a redação foi planejada e que as ideias desenvolvidas são, pouco a pouco, apresentadas de forma organizada;
-- Desenvolvimento dos argumentos, com a explicitação da relevância das ideias apresentadas para a defesa do ponto de vista definido.
+- Selection of arguments;
+- Logical connections between the parts of the text;
+- Smooth progression that reveals the essay was carefully planned, with ideas gradually and coherently introduced;
+- Development of arguments, clearly demonstrating their relevance in supporting your point of view.
 
-**O QUE É PROJETO DE TEXTO?**
+**WHAT IS A TEXT PLAN?**
 
-Projeto de texto é o planejamento prévio à escrita da redação. É o esquema que se deixa perceber pela organização estratégica dos argumentos presentes no texto. É nele que são definidos quais os argumentos que serão mobilizados para a defesa do ponto de vista e qual a melhor ordem para apresentá-los, de modo a garantir que o texto final seja articulado, claro e coerente. Assim, o texto que atende às expectativas referentes à Competência III é aquele no qual é possível perceber a presença implícita de um projeto de texto, ou seja, aquele em que é claramente identificável a estratégia escolhida para defender o ponto de vista.
+A text plan is the pre-writing structure of your essay — the strategic organization of arguments. It defines which arguments will support your viewpoint and the best order to present them, ensuring that the final text is clear, cohesive, and persuasive. An essay that meets Competency 3 expectations reveals an implicit plan and a clear strategy for defending a point of view.
 
-**O QUE É DESENVOLVIMENTO?**
+**WHAT IS DEVELOPMENT?**
 
-O desenvolvimento é a fundamentação dos argumentos apresentados ao longo da sua redação, ou seja, a forma como você explicita e explica as informações, fatos e opiniões que apresenta ao leitor. Um bom desenvolvimento pode ser feito por meio de exemplos, definições, comparações, analogias, estatísticas e de muitas outras formas. De qualquer modo, ele precisa sempre ser relacionado ao ponto de vista que orienta seu projeto de texto, a fim de que nenhuma informação pareça solta ou confusa.
+Development refers to how you justify your arguments throughout the essay. It includes explaining and deepening the facts and opinions you present. Good development may involve examples, definitions, comparisons, analogies, statistics, etc. Regardless of the method, all content must be clearly connected to the point of view you're defending. Unrelated or weakly developed information makes the argument harder to follow.
 
-Por haver um número limite de linhas, a seleção de informações a serem utilizadas em seu projeto de texto deve ser feita com cuidado. É preciso escolher os melhores argumentos e fazer todos os desdobramentos necessários das informações, fatos e opiniões, para que não fiquem lacunas de sentido a serem preenchidas pelo leitor.
+Since the number of lines is limited, it is essential to carefully select the most effective arguments and fully elaborate on them to avoid gaps in reasoning that the reader would need to fill in.
 
-**Seguem algumas recomendações para atender plenamente às expectativas em relação à Competência III:**
+**Tips to meet the expectations of Competency 3:**
 
-- A partir do tema apresentado na prova de redação, defina qual será o ponto de vista que você vai defender em seu texto;
-- Reúna todas as ideias que lhe ocorrerem sobre o tema e depois selecione as que forem pertinentes para a defesa do seu ponto de vista, procurando organizá-las em uma estrutura coerente para usá-las no desenvolvimento do seu texto;
-- Verifique se as informações, os fatos, as opiniões e os argumentos selecionados são pertinentes para a defesa do seu ponto de vista;
-- Na organização das ideias selecionadas para serem abordadas em seu texto, procure definir uma ordem que possibilite ao leitor acompanhar o seu raciocínio facilmente, o que significa que a progressão textual deve ser fluente e articulada com o projeto do texto;
-- Examine com atenção a introdução e a conclusão, para garantir que a coerência foi mantida entre o início e o final da redação;
-- Observe se os argumentos apresentados convergem para a defesa de seu ponto de vista. Além disso, verifique se todos eles estão bem desenvolvidos e não deixam lacunas de sentido para serem preenchidas pelo leitor;
-- Evite apresentar informações, fatos e opiniões soltos no texto, sem desenvolvimento e sem articulação com as outras ideias apresentadas.
+- Define your point of view based on the proposed theme;
+- Brainstorm all relevant ideas, then select and organize those that best support your viewpoint;
+- Check if the selected information, facts, and opinions genuinely support your thesis;
+- Arrange ideas logically, so the reader can follow your reasoning — ensure your essay flows and is coherent with your initial text plan;
+- Carefully revise your introduction and conclusion to ensure consistency between the beginning and end;
+- Make sure your arguments support the point of view and are thoroughly developed, without leaving interpretative gaps;
+- Avoid adding facts and opinions that are not properly explained or connected to the rest of the essay.
 
-**Resumindo: na organização do texto dissertativo-argumentativo, você deve procurar atender às seguintes exigências:**
+**In short, when organizing your argumentative essay, you should:**
 
-- Apresentação clara do ponto de vista e seleção dos argumentos que o sustentam;
-- Encadeamento das ideias, de modo que cada parágrafo apresente informações coerentes com o que foi apresentado anteriormente, sem repetições desnecessárias ou saltos temáticos (mudanças abruptas sobre o que está sendo discutido);
-- Desenvolvimento dessas ideias por meio da explicitação, explicação ou exemplificação de informações, fatos e opiniões, de modo a justificar, para o leitor, o ponto de vista escolhido.
+- Clearly state your point of view and select arguments that support it;
+- Ensure logical sequencing of ideas so that each paragraph follows smoothly from the previous one — avoid redundancy and abrupt topic shifts;
+- Develop arguments through explanation, clarification, or exemplification of facts and opinions to convince the reader of your thesis.
 
-**Considere a seguinte tabela de avaliação:**
+**Evaluation rubric:**
 
-- **200 pontos:** Apresenta informações, fatos e opiniões relacionados ao tema proposto, de forma consistente e organizada, configurando autoria, em defesa de um ponto de vista.
-- **160 pontos:** Apresenta informações, fatos e opiniões relacionados ao tema, de forma organizada, com indícios de autoria, em defesa de um ponto de vista.
-- **120 pontos:** Apresenta informações, fatos e opiniões relacionados ao tema, limitados aos argumentos dos textos motivadores e pouco organizados, em defesa de um ponto de vista.
-- **80 pontos:** Apresenta informações, fatos e opiniões relacionados ao tema, mas desorganizados ou contraditórios e limitados aos argumentos dos textos motivadores, em defesa de um ponto de vista.
-- **40 pontos:** Apresenta informações, fatos e opiniões pouco relacionados ao tema ou incoerentes e sem defesa de um ponto de vista.
-- **0 ponto:** Apresenta informações, fatos e opiniões não relacionados ao tema e sem defesa de um ponto de vista.
+- **200 points:** Presents information, facts, and opinions relevant to the topic in a consistent, organized manner that reflects authorship and supports a clear point of view.
+- **160 points:** Presents relevant and organized content with signs of authorship in support of a point of view.
+- **120 points:** Presents content limited to ideas from the prompt texts and with little organization, in support of a point of view.
+- **80 points:** Presents relevant content but in a disorganized or contradictory way, relying heavily on the prompt texts, with minimal support for the point of view.
+- **40 points:** Presents little relevant or incoherent content with no clear defense of a point of view.
+- **0 points:** Presents irrelevant or disconnected content with no defense of a point of view.
 """

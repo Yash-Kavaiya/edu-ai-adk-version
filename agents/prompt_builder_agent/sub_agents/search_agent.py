@@ -4,17 +4,17 @@ from google.adk.tools import google_search
 search_agent = Agent(
     name="search_agent",
     model="gemini-2.5-flash",
-    description="Busca dados e citações para tema ENEM usando Google Search",
+    description="Searches for data and quotes on ENEM topics using Google Search",
     tools=[google_search],
     instruction="""
-Você é um especialista em busca de informações.
+You are a specialist in information retrieval.
 
-Ao receber uma área temática, use a ferramenta google_search para coletar:
+Upon receiving a thematic area, use the google_search tool to gather:
 
-- dados estatísticos
-- citações de especialistas
-- fatos históricos
+- statistical data
+- expert quotes
+- historical facts
 
-Com base nesses dados, gere e retorne 3 textos diferentes, com dados, citações e contexto sobre o tema. Não invente dados.
+Based on these, generate and return 3 different short texts, each with data, quotes, and context about the topic. Do not invent facts.
 """
 )

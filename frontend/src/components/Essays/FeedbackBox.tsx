@@ -23,7 +23,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
   const competencies = [
     {
       number: 1,
-      title: "Norma Culta da Língua",
+      title: "Standard Language Usage",
       score: data.comp1_score,
       feedback: data.comp1_feedback,
       icon: <PenTool className="h-6 w-6 text-white" />,
@@ -31,7 +31,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
     },
     {
       number: 2,
-      title: "Compreensão do Tema",
+      title: "Topic Understanding",
       score: data.comp2_score,
       feedback: data.comp2_feedback,
       icon: <Brain className="h-6 w-6 text-white" />,
@@ -39,7 +39,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
     },
     {
       number: 3,
-      title: "Argumentação",
+      title: "Argumentation",
       score: data.comp3_score,
       feedback: data.comp3_feedback,
       icon: <Target className="h-6 w-6 text-white" />,
@@ -47,7 +47,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
     },
     {
       number: 4,
-      title: "Coesão e Coerência",
+      title: "Cohesion and Coherence",
       score: data.comp4_score,
       feedback: data.comp4_feedback,
       icon: <BarChart3 className="h-6 w-6 text-white" />,
@@ -55,7 +55,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
     },
     {
       number: 5,
-      title: "Proposta de Solução",
+      title: "Solution Proposal",
       score: data.comp5_score,
       feedback: data.comp5_feedback,
       icon: <Lightbulb className="h-6 w-6 text-white" />,
@@ -71,10 +71,10 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
   };
 
   const getScoreLabel = (score: number) => {
-    if (score >= 160) return "Excelente";
-    if (score >= 120) return "Bom";
-    if (score >= 80) return "Regular";
-    return "Precisa Melhorar";
+    if (score >= 160) return "Excellent";
+    if (score >= 120) return "Good";
+    if (score >= 80) return "Fair";
+    return "Needs Improvement";
   };
 
   return (
@@ -84,7 +84,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
         <div className="flex items-center justify-center mb-4">
           <Award className="h-8 w-8 text-yellow-400 mr-3" />
           <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Resultado da <span className="gradient-text">Avaliação</span>
+            Evaluation <span className="gradient-text">Results</span>
           </h2>
         </div>
 
@@ -110,7 +110,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
         </div>
 
         <p className="text-white/70 text-lg">
-          Sua redação foi avaliada pelas 5 competências do ENEM
+          Your essay was evaluated based on ENEM's 5 competencies
         </p>
       </div>
 
@@ -251,7 +251,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
           <div className="flex items-center mb-6">
             <FileText className="h-6 w-6 text-blue-400 mr-3" />
             <h3 className="text-2xl font-bold text-white">
-              Feedback <span className="gradient-text">Geral</span>
+              Overall <span className="gradient-text">Feedback</span>
             </h3>
           </div>
 
@@ -268,7 +268,7 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
         <div className="flex items-center mb-6">
           <TrendingUp className="h-6 w-6 text-green-400 mr-3" />
           <h3 className="text-2xl font-bold text-white">
-            Próximos <span className="gradient-text">Passos</span>
+            Next <span className="gradient-text">Steps</span>
           </h3>
         </div>
 
@@ -276,11 +276,10 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
           <div className="bg-white/5 rounded-xl p-4 border border-white/10">
             <div className="flex items-center mb-2">
               <CheckCircle className="h-5 w-5 text-green-400 mr-2" />
-              <span className="text-white font-medium">Pratique mais</span>
+              <span className="text-white font-medium">Keep Practicing</span>
             </div>
             <p className="text-white/70 text-sm">
-              Continue praticando com novos temas para melhorar suas
-              competências
+              Continue practicing with new topics to improve your competencies
             </p>
           </div>
 
@@ -288,12 +287,12 @@ export default function FeedbackBox({ data }: { data: EssayEvaluationResult }) {
             <div className="flex items-center mb-2">
               <Star className="h-5 w-5 text-yellow-400 mr-2" />
               <span className="text-white font-medium">
-                Estude os pontos fracos
+                Focus on Weak Points
               </span>
             </div>
             <p className="text-white/70 text-sm">
-              Foque nas competências com menor pontuação para equilibrar seu
-              desempenho
+              Focus on competencies with lower scores to balance your
+              performance
             </p>
           </div>
         </div>

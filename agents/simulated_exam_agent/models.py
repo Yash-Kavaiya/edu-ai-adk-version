@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List
 
-class Alternativas(BaseModel):
+class Alternatives(BaseModel):
     A: str
     B: str
     C: str
@@ -9,10 +9,10 @@ class Alternativas(BaseModel):
     E: str
 
 class SimulatedQuestion(BaseModel):
-    pergunta: str
-    alternativas: Alternativas
-    resposta_correta: str = Field(..., pattern="^[A-E]$")
-    explicacao: str
+    question: str = Field(..., description="ENEM-style question prompt")
+    alternatives: Alternatives = Field(..., description="Answer choices A to E")
+    correct_answer: str = Field(..., pattern="^[A-E]$", description="Correct answer letter")
+    explanation: str = Field(..., description="Justification for the correct answer")
 
 class SimulatedExamOutput(BaseModel):
-    questoes: List[SimulatedQuestion]
+    questions: List[SimulatedQuestion] = Field(..., description="List of generated ENEM-style questions")

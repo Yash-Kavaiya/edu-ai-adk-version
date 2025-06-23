@@ -1,48 +1,78 @@
 competency_IV_grading = """
-### Competência 4: DEMONSTRAR CONHECIMENTO DOS MECANISMOS LINGUÍSTICOS NECESSÁRIOS PARA A CONSTRUÇÃO DA ARGUMENTAÇÃO
+### Competency 4: DEMONSTRATE KNOWLEDGE OF LINGUISTIC MECHANISMS NECESSARY FOR BUILDING ARGUMENTATION
 
-Os aspectos a serem avaliados nesta Competência dizem respeito à estruturação lógica e formal entre as partes da redação. A organização textual exige que as frases e os parágrafos estabeleçam entre si uma relação que garanta a sequenciação coerente do texto e a interdependência entre as ideias.
+This competency evaluates the logical and formal structuring between parts of the essay. Textual organization requires that sentences and paragraphs establish relationships that ensure coherent sequencing and interdependence of ideas.
 
-Essa articulação é feita mobilizando-se recursos coesivos, em especial operadores argumentativos, que são os principais termos responsáveis pelas relações semânticas construídas ao longo do texto dissertativo-argumentativo, por exemplo, relações de igualdade (assim como, outrossim...), de adversidade (entretanto, porém...), de causa/consequência (por isso, assim...), de conclusão (enfim, portanto...), entre muitos outros. Certas preposições, conjunções, alguns advérbios e locuções adverbiais são responsáveis pela coesão do texto, porque estabelecem uma inter-relação entre orações, frases e parágrafos, além de pronomes e expressões referenciais, conforme explicaremos adiante, no item “referenciação”.
+This articulation is achieved through **cohesive devices**, especially **argumentative operators**, which are the main elements responsible for semantic connections throughout a discursive-argumentative essay. Examples include relations of:
+- similarity (e.g., “similarly”, “likewise”),
+- contrast (e.g., “however”, “nevertheless”),
+- cause/consequence (e.g., “therefore”, “as a result”),
+- conclusion (e.g., “in conclusion”, “thus”).
 
-Assim, na produção da sua redação, você deve utilizar variados recursos linguísticos que garantam as relações de continuidade essenciais à elaboração de um texto coeso. Na avaliação da Competência IV, serão considerados, portanto, os mecanismos linguísticos que promovem o encadeamento textual.
+Prepositions, conjunctions, adverbs, and adverbial phrases contribute to textual cohesion by connecting clauses, sentences, and paragraphs. Pronouns and referential expressions also play a key role — as we’ll explore below under **referencing**.
 
-Você viu que as Competências III e IV consideram a construção da argumentação ao longo do texto, porém avaliam aspectos diferentes. Na Competência III, avalia-se a capacidade de o participante “selecionar, relacionar, organizar e interpretar informações, fatos, opiniões e argumentos em defesa de um ponto de vista”, ou seja, trata-se da estrutura mais profunda do texto. Já a coesão, observada na Competência IV, atua na superfície textual, isto é, avaliam-se as marcas linguísticas que ajudam o leitor a chegar à compreensão profunda do texto.
+In your writing, you should use a variety of linguistic resources to ensure **continuity of ideas**, making your text cohesive. Competency 4 assesses the mechanisms that provide textual flow and connection.
 
-Desse modo, você deve, na construção de seu texto, demonstrar conhecimento sobre os mecanismos linguísticos necessários para um adequado encadeamento textual, considerando os recursos coesivos que garantem a conexão de ideias tanto entre os parágrafos quanto dentro deles.
+> Competencies 3 and 4 both assess the construction of argumentation, but focus on different levels:
+- Competency 3 evaluates deep structure — the logic and coherence of ideas.
+- Competency 4 evaluates surface structure — the linguistic markers that help readers interpret your ideas clearly.
 
-**COMO GARANTIR A COESÃO DO TEXTO?**
+You must show knowledge of the cohesive mechanisms needed to properly link paragraphs and sentences.
 
-Para garantir a coesão textual, devem ser observados determinados princípios em diferentes níveis:
+---
 
-- Estruturação dos parágrafos – um parágrafo é uma unidade textual formada por uma ideia principal à qual se ligam ideias secundárias. No texto dissertativo-argumentativo, os parágrafos podem ser desenvolvidos por comparação, por causa-consequência, por exemplificação, por detalhamento, entre outras possibilidades. Deve haver articulação explícita entre um parágrafo e outro;
-- Estruturação dos períodos – pela própria especificidade do texto dissertativo-argumentativo, os períodos do texto são, normalmente, estruturados de modo complexo, formados por duas ou mais orações, para que se possam expressar as ideias de causa/consequência, contradição, temporalidade, comparação, conclusão, entre outras;
-- Referenciação – pessoas, coisas, lugares e fatos são apresentados e, depois, retomados, à medida que o texto vai progredindo. Esse processo pode ser realizado mediante o uso de pronomes, advérbios, artigos, sinônimos, antônimos, hipônimos, hiperônimos, além de expressões resumitivas, metafóricas ou metadiscursivas.
+**HOW TO ENSURE TEXTUAL COHESION?**
 
-**RECOMENDAÇÕES**
+Cohesion should be observed at different structural levels:
 
-- Procure utilizar as seguintes estratégias de coesão para se referir a elementos que já apareceram no texto:  
-  a) Substituição de termos ou expressões por pronomes pessoais, possessivos e demonstrativos, advérbios que indicam localização, artigos;  
-  b) Substituição de termos ou expressões por sinônimos, hipônimos, hiperônimos ou expressões resumitivas;  
-  c) Substituição de verbos, substantivos, períodos ou fragmentos do texto por conectivos ou expressões que retomem o que foi dito;  
-  d) Elipse ou omissão de elementos que já tenham sido citados ou que sejam facilmente identificáveis.
+- **Paragraph structuring**: A paragraph is a unit centered on one main idea supported by secondary ones. In discursive-argumentative texts, paragraphs may develop through comparison, cause-effect, exemplification, or elaboration. There should be clear and explicit links between paragraphs.
 
-- Utilize operadores argumentativos para relacionar orações, frases e parágrafos de forma expressiva ao longo do texto.
-- Verifique se o elemento coesivo utilizado estabelece a relação de sentido pretendida.
+- **Sentence structuring**: Given the argumentative nature of this essay type, sentences tend to be complex — containing two or more clauses — to express cause/consequence, contrast, chronology, comparison, and conclusion.
 
-**Resumindo: na elaboração da redação, você deve evitar:**
+- **Referencing**: As your essay progresses, people, places, facts, or ideas should be clearly introduced and then referred to again. This can be done using:
+  - pronouns,
+  - adverbs,
+  - articles,
+  - synonyms,
+  - antonyms,
+  - hypernyms/hyponyms,
+  - summary expressions,
+  - metaphors or metadiscursive phrases.
 
-- Ausência de articulação entre orações, frases e parágrafos;
-- Ausência de paragrafação (texto elaborado em um único parágrafo);
-- Emprego de conector (preposição, conjunção, pronome relativo, alguns advérbios e locuções adverbiais) que não estabeleça relação lógica entre dois trechos do texto e prejudique a compreensão da mensagem;
-- Repetição ou substituição inadequada de palavras sem se valer dos recursos oferecidos pela língua (pronome, advérbio, artigo, sinônimo).
+---
 
-**Considere a seguinte tabela de avaliação:**
+**RECOMMENDATIONS:**
 
-- **200 pontos:** Articula bem as partes do texto e apresenta repertório diversificado de recursos coesivos.
-- **160 pontos:** Articula as partes do texto, com poucas inadequações, e apresenta repertório diversificado de recursos coesivos.
-- **120 pontos:** Articula as partes do texto, de forma mediana, com inadequações, e apresenta repertório pouco diversificado de recursos coesivos.
-- **80 pontos:** Articula as partes do texto, de forma insuficiente, com muitas inadequações, e apresenta repertório limitado de recursos coesivos.
-- **40 pontos:** Articula as partes do texto de forma precária.
-- **0 ponto:** Não articula as informações.
+To create cohesive links, use the following strategies:
+
+a) **Referential substitution**: Replace earlier terms using personal, demonstrative, or possessive pronouns, location-indicating adverbs, or articles.
+
+b) **Lexical substitution**: Replace terms with synonyms, hypernyms/hyponyms, or summarizing expressions.
+
+c) **Verbal substitution**: Use connectives or expressions to reference previously mentioned verbs, nouns, phrases, or full clauses.
+
+d) **Ellipsis**: Omit elements already mentioned or easily inferred from context.
+
+- Use **argumentative operators** to link clauses, sentences, and paragraphs fluidly.
+- Always check whether the cohesive element you've used conveys the intended meaning.
+
+---
+
+**In summary, avoid the following when writing:**
+
+- Lack of connection between clauses, sentences, or paragraphs;
+- No paragraph breaks (writing everything in a single paragraph);
+- Use of a connector (e.g., preposition, conjunction, relative pronoun, adverb) that does not establish a logical link and impairs comprehension;
+- Inappropriate repetition or substitution of words without using proper linguistic tools (e.g., pronouns, adverbs, synonyms).
+
+---
+
+**Evaluation rubric:**
+
+- **200 points:** Effectively connects all parts of the text and demonstrates a wide range of cohesive devices.
+- **160 points:** Connects parts of the text with minor issues and uses a varied set of cohesive resources.
+- **120 points:** Connects parts of the text in an average way, with some errors and limited use of cohesive devices.
+- **80 points:** Connects parts of the text insufficiently, with many errors and a narrow range of cohesive tools.
+- **40 points:** Poor articulation of ideas throughout the text.
+- **0 points:** No cohesion; ideas are disconnected.
 """

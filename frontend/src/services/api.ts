@@ -5,7 +5,7 @@ const BASE_API_URL = "http://localhost:8080";
 
 export class ApiService {
   static async runAgent(payload: RunPayload): Promise<any> {
-    console.log("🔄 Enviando payload para API:", payload);
+    console.log("🔄 Sending payload to API:", payload);
     try {
       const response = await fetch(`${BASE_API_URL}/run`, {
         method: "POST",
@@ -56,10 +56,10 @@ export class ApiService {
   }
 
   static createSimulatedExamPayload(options: {
-    tema: string;
+    topic: string;
     area: string;
-    dificuldade: string;
-    tempo: number;
+    difficulty: string;
+    time: number;
   }): RunPayload {
     return {
       app_name: "orchestrator_agent",
@@ -69,7 +69,7 @@ export class ApiService {
         role: "user",
         parts: [
           {
-            text: `Quero um simulado do ENEM sobre o tema "${options.tema}" na área de "${options.area}" com dificuldade "${options.dificuldade}" e tempo de ${options.tempo} minutos.`,
+            text: `The user wants a simulated exam about the topic "${options.topic}" in the area of "${options.area}" with difficulty "${options.difficulty}" and time of ${options.time} minutes.`,
           },
         ],
       },
@@ -82,14 +82,14 @@ export class ApiService {
     };
   }
 
-  static createPromptPayload(theme: string): RunPayload {
+  static createPromptPayload(topic: string): RunPayload {
     return {
       app_name: "orchestrator_agent",
       user_id: USER_SESSION.userId,
       session_id: USER_SESSION.sessionId,
       new_message: {
         role: "user",
-        parts: [{ text: `Gere um tema de redação sobre: ${theme}` }],
+        parts: [{ text: `Generate an essay topic about: ${topic}` }],
       },
     };
   }
@@ -106,7 +106,7 @@ export class ApiService {
         role: "user",
         parts: [
           {
-            text: `Gere uma questão interdisciplinar sobre: ${options.area1} e ${options.area2}.`,
+            text: `Generate an interdisciplinary question about: ${options.area1} and ${options.area2}.`,
           },
         ],
       },

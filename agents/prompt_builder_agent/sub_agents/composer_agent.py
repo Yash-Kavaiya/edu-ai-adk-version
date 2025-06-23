@@ -4,23 +4,23 @@ from ..models import PromptOutput
 composer_agent = Agent(
     name="composer_agent",
     model="gemini-2.5-flash",
-    description="Gera JSON estruturado com tema ENEM, coletâneas e instruções",
+    description="Generates structured JSON with ENEM essay topic, source texts, and writing instructions",
     instruction="""
-Você receberá três textos com dados, citações e contexto sobre um tema de redação.
+You will receive three texts with data, quotes, and context about an essay topic.
 
-Com base nesse conteúdo, gere o seguinte JSON:
+Based on this content, generate the following JSON:
 
 {
-  "tema": "...",
-  "coletaneas": [
-    "Texto 1...",
-    "Texto 2...",
-    "Texto 3..."
+  "topic": "...",
+  "source_texts": [
+    "Text 1...",
+    "Text 2...",
+    "Text 3..."
   ],
-  "instrucoes": "..."
+  "instructions": "..."
 }
 
-⚠️ Responda somente com o JSON.
+⚠️ Respond with JSON only.
 """,
-  output_schema=PromptOutput,
+    output_schema=PromptOutput,
 )

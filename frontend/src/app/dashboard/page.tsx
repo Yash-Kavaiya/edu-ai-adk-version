@@ -29,6 +29,7 @@ import {
   Award,
   ChevronRight,
 } from "lucide-react";
+import BackgroundBlur from "@/components/ui/background-blur";
 
 export default function Dashboard() {
   const agents = [
@@ -169,22 +170,7 @@ export default function Dashboard() {
     <div className="min-h-screen bg-background relative overflow-hidden">
       <div className="mx-auto px-4 py-8 relative z-10">
         {/* Header Section */}
-        {/* Enhanced animated background with floating gradient orbs */}
-        <div className="absolute inset-0 overflow-hidden -z-10 bg-background">
-          {/* Animated gradient orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-r from-blue-600/25 to-cyan-600/25 rounded-full blur-3xl animate-bounce-slow"></div>
-          <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-gradient-to-r from-indigo-600/30 to-purple-700/30 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-40 right-10 w-64 h-64 bg-gradient-to-r from-pink-600/35 to-rose-600/35 rounded-full blur-3xl animate-float-reverse"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-full blur-3xl animate-spin-slow"></div>
-
-          {/* Additional smaller orbs for depth */}
-          <div className="absolute top-32 left-1/3 w-40 h-40 bg-gradient-to-r from-cyan-600/40 to-blue-600/40 rounded-full blur-2xl animate-pulse-slow"></div>
-          <div className="absolute bottom-32 right-1/3 w-48 h-48 bg-gradient-to-r from-emerald-600/35 to-teal-600/35 rounded-full blur-2xl animate-float-slow"></div>
-
-          {/* Grid pattern overlay */}
-          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        </div>
+        <BackgroundBlur />
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center px-4 py-2 mb-6 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
             <Globe className="w-4 h-4 mr-2 text-blue-400" />
@@ -222,7 +208,7 @@ export default function Dashboard() {
         </div>
 
         {/* AI Agents Grid */}
-        <div className="mb-12">
+        <div className="mb-12 px-12">
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
             Choose Your <span className="gradient-text">AI Agent</span>
           </h2>

@@ -1,44 +1,62 @@
 competency_V_grading = """
-### Competência 5: ELABORAR PROPOSTA DE INTERVENÇÃO PARA O PROBLEMA ABORDADO, RESPEITANDO OS DIREITOS HUMANOS
+### Competency 5: DEVELOP A PROPOSAL FOR INTERVENTION TO ADDRESS THE DISCUSSED PROBLEM WHILE RESPECTING HUMAN RIGHTS
 
-O quinto aspecto a ser avaliado no seu texto é a apresentação de uma proposta de intervenção para o problema abordado, respeitando-se os Direitos Humanos. Propor uma intervenção para o problema apresentado pelo tema significa sugerir uma iniciativa que busque enfrentá-lo.
+The fifth aspect to be evaluated in your essay is the presentation of a **proposal for intervention** that addresses the problem discussed in the prompt, while **respecting human rights**. Proposing an intervention means suggesting an initiative aimed at confronting the issue.
 
-A elaboração de uma proposta de intervenção, na prova de redação do Enem, representa uma ocasião para que você demonstre seu preparo para exercitar a cidadania e atuar na realidade, em consonância com os direitos humanos. Portanto, você deve usar os conhecimentos desenvolvidos ao longo de sua formação para a produção de um texto no qual, além de se posicionar de maneira crítica e argumentar a favor de um ponto de vista, você possa indicar uma iniciativa que interfira no problema discutido em sua redação.
+The ENEM writing task is an opportunity for you to demonstrate your readiness to engage in citizenship and contribute to social change in alignment with human rights. Therefore, beyond taking a critical stance and supporting a point of view with arguments, you must indicate an initiative that could effectively intervene in the problem discussed.
 
-A proposta de intervenção precisa estar relacionada ao tema e integrada ao seu projeto de texto. Considerando seu planejamento de escrita (avaliado na Competência III), sua proposta deve ser coerente em relação ao ponto de vista desenvolvido e aos argumentos utilizados, já que expressa sua visão, como autor, das possíveis soluções para a questão discutida. Assim, é necessário que a intervenção apontada responda aos problemas abordados por você, mostrando-se articulada ao seu projeto de texto.
+The intervention proposal must:
+- Be **related to the theme**,
+- Be **integrated into the text’s argumentation structure**,
+- Be **coherent** with the thesis and arguments already presented (as evaluated in Competency 3).
 
-Ao redigir seu texto, busque apresentar uma proposta concreta, específica ao tema e consistente com o desenvolvimento de suas ideias. Para construir uma proposta muito bem elaborada, você deve não apenas propor uma ação interventiva, mas também o ator social competente para executá-la, de acordo com o âmbito da ação escolhida: individual, familiar, comunitário, social, político, governamental. Além disso, você deve determinar o meio de execução da ação e o seu efeito ou a sua finalidade, bem como incluir algum outro detalhamento.
+It should clearly address the problem(s) raised in your essay and be well articulated with your overall writing project.
 
-**Ao elaborar sua proposta, o aluno deve procurar responder às seguintes perguntas:**
+A strong intervention should be **concrete**, **specific to the theme**, and **consistent** with your development. Ideally, you should identify:
+- The **action** (what will be done),
+- The **responsible agent** (who will do it),
+- The **means of implementation** (how it will be done),
+- The **intended effect** or outcome,
+- Any **additional relevant detail**.
 
-1. O que é possível apresentar como solução para o problema?  
-2. Quem deve executá-la?  
-3. Como viabilizar essa solução?  
-4. Qual efeito ela pode alcançar?  
-5. Que outra informação pode ser acrescentada para detalhar a proposta?
+**Students should aim to answer the following when developing their proposal:**
 
-**O QUE É CONSIDERADO DESRESPEITO AOS DIREITOS HUMANOS?**
+1. What solution can be proposed to the problem?
+2. Who is responsible for executing it?
+3. How can the solution be implemented?
+4. What effect or result is expected?
+5. What other detail can be added to enrich the proposal?
 
-A prova de redação do Enem sempre assinalou a necessidade de o participante respeitar os direitos humanos, e essa determinação está na matriz de referência da redação do Enem. Conforme a matriz, as redações que apresentarem propostas de intervenção que desrespeitem os direitos humanos serão penalizadas na Competência V.
+---
 
-Pode-se dizer que determinadas ideias e ações serão sempre avaliadas como contrárias aos direitos humanos, tais como: defesa de tortura, mutilação, execução sumária e qualquer forma de “justiça com as próprias mãos”; incitação a qualquer tipo de violência motivada por questões de raça, etnia, gênero, credo, opinião política, condição física, origem geográfica ou socioeconômica; explicitação de qualquer forma de discurso de ódio (voltado contra grupos sociais específicos).
+**WHAT IS CONSIDERED A VIOLATION OF HUMAN RIGHTS?**
 
-Para a avaliação das redações, são considerados os seguintes princípios norteadores dos direitos humanos, pautados no artigo 3º da Resolução nº 1, de 30 de maio de 2012, a qual estabelece as Diretrizes Nacionais para a Educação em Direitos Humanos:
+The ENEM essay has always emphasized the importance of respecting human rights. According to the official rubric, essays that include proposals violating these principles will be penalized under Competency 5.
 
-- Dignidade humana  
-- Igualdade de direitos  
-- Reconhecimento e valorização das diferenças e diversidades  
-- Laicidade do Estado  
-- Democracia na educação  
-- Transversalidade, vivência e globalidade  
-- Sustentabilidade socioambiental
+Examples of violations include, but are not limited to:
+- Defending torture, mutilation, or summary execution,
+- Supporting vigilante justice (“taking justice into one's own hands”),
+- Inciting violence based on race, ethnicity, gender, religion, political views, physical condition, geographic origin, or socioeconomic status,
+- Expressing hate speech against specific social groups.
 
-**Considere a seguinte tabela de avaliação:**
+The following **human rights principles**, based on Article 3 of Resolution No. 1 (May 30, 2012), which outlines Brazil’s National Guidelines for Human Rights Education, should be upheld:
 
-- **200 pontos:** Elabora muito bem proposta de intervenção, detalhada, relacionada ao tema e articulada à discussão desenvolvida no texto.
-- **160 pontos:** Elabora bem proposta de intervenção relacionada ao tema e articulada à discussão desenvolvida no texto.
-- **120 pontos:** Elabora, de forma mediana, proposta de intervenção relacionada ao tema e articulada à discussão desenvolvida no texto.
-- **80 pontos:** Elabora, de forma insuficiente, proposta de intervenção relacionada ao tema, ou não articulada com a discussão desenvolvida no texto.
-- **40 pontos:** Apresenta proposta de intervenção vaga, precária ou relacionada apenas ao assunto.
-- **0 ponto:** Não apresenta proposta de intervenção ou apresenta proposta não relacionada ao tema ou ao assunto.
+- Human dignity  
+- Equality of rights  
+- Recognition and appreciation of diversity  
+- Secularism of the state  
+- Democracy in education  
+- Inclusivity and comprehensiveness  
+- Socio-environmental sustainability
+
+---
+
+**Evaluation rubric:**
+
+- **200 points:** Presents a well-developed, detailed intervention proposal, clearly related to the theme and integrated with the essay’s argument.
+- **160 points:** Presents a solid intervention proposal related to the theme and integrated with the essay’s discussion.
+- **120 points:** Presents a reasonably developed intervention related to the theme and the essay’s discussion.
+- **80 points:** Presents a weak intervention proposal, or one that is not clearly integrated with the essay’s argument.
+- **40 points:** Presents a vague or underdeveloped proposal, or one related only to the general subject.
+- **0 points:** No intervention proposal is presented, or the proposal is unrelated to the theme or violates human rights principles.
 """

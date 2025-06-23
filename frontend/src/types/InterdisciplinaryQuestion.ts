@@ -1,12 +1,12 @@
 export type InterdisciplinaryQuestion = {
-  pergunta: string;
-  alternativas: {
+  question: string;
+  alternatives: {
     A: string;
     B: string;
     C: string;
     D: string;
     E: string;
   };
-  resposta_correta: "A" | "B" | "C" | "D" | "E";
-  justificativa: string;
+  correct_answer: "A" | "B" | "C" | "D" | "E";
+  explanation: string;
 };
