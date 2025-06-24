@@ -69,4 +69,14 @@ export class ApiService {
       },
     };
   }
+
+  static async checkForSession(
+    userId: string,
+    storedSessionId: string
+  ): Promise<boolean> {
+    const res = await fetch(
+      `${BASE_API_URL}/apps/orchestrator_agent/users/${userId}/sessions/${storedSessionId}/state`
+    );
+    return res.ok;
+  }
 }
