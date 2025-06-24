@@ -1,80 +1,95 @@
-# 📘 Edu.AI — Multi-Agent Educational System
+# 📘 Edu.AI — Multi-Agent Educational System for ENEM
 
-> 📎 [Learn more about the ENEM exam](./about_enem.md)
+> 🇧🇷 _Quality education for all, powered by autonomous agents._
 
-**ENEM.AI** is a multi-agent autonomous system built using the Agent Development Kit (ADK) and Google Cloud, designed to democratize access to ENEM preparation in Brazil. The system generates personalized study plans, corrects essays, creates interdisciplinary questions, and simulates ENEM-like tests — all powered by intelligent agents working together.
+**Edu.AI** is an intelligent multi-agent platform designed to democratize access to high-quality ENEM preparation in Brazil. Built using Google’s **Agent Development Kit (ADK)**, Edu.AI offers personalized essay correction, simulated exams, study plans, and content generation — simulating the experience of an elite preparatory course, but powered entirely by AI.
+
+---
 
 ## 🚀 Features
 
-- ✍️ **Essay correction** based on ENEM's 5 competencies with detailed feedback
-- 🧪 **Simulated ENEM exams** by area, theme, or difficulty
-- 📚 **Automatic generation of essay topics** with motivating texts
-- 🎓 **Personalized study paths** based on student performance
-- 🎥 **Dynamic content generation**: summaries, flashcards, slides, and more
-- 🧩 **Interdisciplinary question generation** aligned with ENEM's standards
-- 📈 **Progress tracking dashboard** with detailed reports
-- 🗣️ **AI-guided rephrasing** to help students improve their writing
-- 📤 **Seamless content delivery** via web interface
+- ✍️ **AI-powered Essay Correction**
+  Corrects essays according to ENEM's 5 official competencies, with scores and detailed feedback.
 
-## 🧠 Multi-Agent Architecture
+- 📚 **ENEM-style Prompt Generation**
+  Creates contextualized essay prompts with motivational texts.
 
-| Agent                    | Description                                                 | Technologies                        |
-| ------------------------ | ----------------------------------------------------------- | ----------------------------------- |
-| `EssayEvaluatorAgent`    | Corrects essays by ENEM criteria, gives feedback and scores | Vertex AI, Cloud Storage            |
-| `PromptBuilderAgent`     | Creates ENEM-style essay prompts with contextual texts      | Vertex AI, Document AI              |
-| `SimulatedExamAgent`     | Generates customized tests with questions and explanations  | BigQuery, Vertex AI                 |
-| `InterdisciplinaryAgent` | Builds complex questions mixing different disciplines       | Vertex AI prompt chaining           |
-| `PersonalTutorAgent`     | Analyzes user performance and suggests study paths          | BigQuery                            |
-| `ContentGeneratorAgent`  | Generates didactic content: summaries, slides, visuals      | Vertex AI, Imagen, Firebase Storage |
-| `RephraserAgent`         | Helps students rewrite essays and answers with guidance     | Vertex AI                           |
-| `ProgressTrackerAgent`   | Updates the student's performance dashboard                 | BigQuery, Looker Studio             |
-| `DeliveryAgent`          | Organizes and serves the generated content to the UI        | Firebase Hosting / Streamlit        |
+- 🧪 **Simulated Exams by Area & Theme**
+  Builds customized tests with answer keys and explanations.
 
-## 🗂️ Tech Stack
+- 🧩 **Interdisciplinary Question Generation**
+  Combines areas like History + Physics, or Chemistry + Sociology.
 
-- **Core:** Agent Development Kit (ADK) — Python
-- **AI Models:** Vertex AI LLM, Imagen
-- **Data & Storage:** BigQuery, Cloud Storage
-- **Document Parsing:** Document AI (for past ENEMs)
-- **UI Hosting:** Firebase Hosting or Streamlit
-- **Analytics:** Looker Studio for dashboards
+- 🎓 **Personalized Study Paths**
+  Analyzes performance and suggests targeted learning strategies.
 
-## 🗺️ Architecture Diagram
+- 🎥 **Didactic Content Generation**
+  Produces summaries, flashcards, slides, and visuals.
+
+- 🗣️ **AI Rewriting Assistant**
+  Helps students rewrite and improve their essays.
+
+- 📈 **Progress Tracking Dashboard**
+  Tracks scores over time and gives actionable recommendations.
+
+- 📤 **Seamless Frontend Delivery**
+  Clean UI powered by Next.js and deployed via Vercel.
+
+---
+
+## 🧠 Multi-Agent System Overview
+
+| Agent                    | Role                                                   |
+| ------------------------ | ------------------------------------------------------ |
+| `EssayEvaluatorAgent`    | Evaluates essays with official rubric and feedback     |
+| `PromptBuilderAgent`     | Generates contextual ENEM-style essay prompts          |
+| `SimulatedExamAgent`     | Produces realistic exams with grading and explanations |
+| `InterdisciplinaryAgent` | Creates cross-disciplinary questions                   |
+| `ContentGeneratorAgent`  | Builds content: summaries, flashcards, slides          |
+| `RephraserAgent`         | Suggests improved phrasing for essays or short answers |
+| `ProgressTrackerAgent`   | Tracks performance and calculates averages             |
+| `PersonalTutorAgent`     | Recommends study paths based on user history           |
+
+---
+
+## 🗺️ Architecture
+
+> 🧭 Agents work collaboratively via an orchestrator and shared state.
 
 ![Architecture Diagram](./docs/Architecture.pdf)
 
-## 🎥 Demo Video
+- **Frontend:** Next.js + Tailwind (Vercel)
+- **Backend:** FastAPI with ADK agents
+- **Storage:** Google Cloud Storage, SQLite
+- **OCR:** Cloud Vision for extracting essays from images
+- **LLMs:** Gemini 2.5-flash
 
-👉 [Watch the demo](https://link-to-your-video.com)
+---
 
-## 📂 Repository Structure
+### 🏃‍♀️ Installation
+
+To run the agents, clone the repository and install the dependencies:
 
 ```bash
-enem-ai/
-├── agents/
-│   ├── essay_evaluator.py
-│   ├── simulated_exam.py
-│   ├── personal_tutor.py
-│   └── ...
-├── orchestrator/
-│   └── main_orchestrator.py
-├── frontend/
-│   └── public/
-│   └── src/
-│   └── ...
-├── data/
-│   └── questions_dataset.csv
-├── README.md
-└── requirements.txt
+pip install -r requirements.txt
 ```
 
-## 👥 Team
+Then, start the FastAPI server:
 
-- Giovanna Moeller
-- Gabriel Valentim
-- Hudson Araújo
-- Samuel Jabes
+```bash
+uvicorn main:app --reload --port 8080
+```
 
-## 📜 License
+The frontend is available at [https://edu-ai-adk.vercel.app/](https://edu-ai-adk.vercel.app/).
 
-MIT License
+---
+
+## 🏆 What We’re Proud Of
+
+- Built a truly modular and scalable multi-agent architecture with 8+ intelligent agents.
+- Delivered a full-stack AI product with a clean and functional UI.
+- Created a solution with **real potential to impact education** at scale in Brazil.
+
+---
+
+Built by Giovanna Moeller.

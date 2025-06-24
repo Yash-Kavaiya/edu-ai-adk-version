@@ -8,10 +8,6 @@ export default function BackgroundBlur() {
       <div className="absolute bottom-40 right-10 w-64 h-64 bg-gradient-to-r from-pink-600/35 to-rose-600/35 rounded-full blur-3xl animate-float-reverse"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-violet-600/20 to-purple-600/20 rounded-full blur-3xl animate-spin-slow"></div>
 
-      {/* Additional smaller orbs for depth */}
-      <div className="absolute top-32 left-1/3 w-40 h-40 bg-gradient-to-r from-cyan-600/40 to-blue-600/40 rounded-full blur-2xl animate-pulse-slow"></div>
-      <div className="absolute bottom-32 right-1/3 w-48 h-48 bg-gradient-to-r from-emerald-600/35 to-teal-600/35 rounded-full blur-2xl animate-float-slow"></div>
-
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
     </div>

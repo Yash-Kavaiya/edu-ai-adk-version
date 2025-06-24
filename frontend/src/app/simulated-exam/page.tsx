@@ -113,7 +113,7 @@ export default function SimulatedExam() {
       const payload = ApiService.createPayload(userId, sessionId, final_text);
 
       const data = await ApiService.runAgent(payload);
-      const parsed = parseADKResponse<SimulatedExamResult>(data);
+      const parsed = parseADKResponse<SimulatedExamResult>(data.response);
 
       if (parsed && parsed.questions?.length > 0) {
         setQuestions(parsed);
@@ -204,19 +204,19 @@ export default function SimulatedExam() {
 
   if (quizState === "loading") {
     return (
-      <div className="min-h-screen bg-background relative overflow-hidden flex items-center justify-center">
-        <div className="w-full relative z-10">
+      <div className="min-h-screen bg-background relative overflow-hidden">
+        <div className="mx-auto px-4 py-8 relative z-10">
           <BackgroundBlur />
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="text-center space-y-8 max-w-lg mx-auto px-4"
+            className="text-center space-y-8 max-w-lg mx-auto px-4 flex items-center flex-col mt-24"
           >
             <div className="relative">
               <div className="w-20 h-20 border-4 border-primary/30 rounded-full animate-spin border-t-primary mx-auto"></div>
               <Brain className="w-10 h-10 text-primary absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 flex flex-col items-center">
               <div className="space-y-3">
                 <h2 className="text-3xl font-bold text-white">
                   Generating your exam...
@@ -228,7 +228,7 @@ export default function SimulatedExam() {
               <Link href="/dashboard">
                 <Button
                   variant="outline"
-                  className="text-white border-white/20 hover:bg-white/10 flex items-center gap-2"
+                  className="button-secondary flex items-center gap-2"
                 >
                   <Home className="w-4 h-4" />
                   Cancel and Return

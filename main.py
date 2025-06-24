@@ -41,6 +41,7 @@ async def run_agent(payload: dict):
     user_id = payload["user_id"]
     session_id = payload["session_id"]
     message = payload["new_message"]
+    print("Payload: ", payload)
 
     content = types.Content(
         role=message["role"],

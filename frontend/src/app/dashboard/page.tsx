@@ -107,7 +107,7 @@ export default function Dashboard() {
       href: "/content-generator",
       color: "from-pink-600 to-purple-700",
       features: [
-        "Multi-format content",
+        "Video suggestions",
         "Visual materials",
         "Personalized explanations",
       ],

@@ -98,7 +98,7 @@ const Features = () => {
         "Creates comprehensive study materials including explanations, slides, visual content, flashcards, and mind maps tailored to your learning style and needs.",
       icon: <Sparkles className="h-6 w-6" />,
       features: [
-        "Multi-format content creation",
+        "Videos suggestions",
         "Visual learning materials",
         "Interactive flashcards",
         "Personalized explanations",

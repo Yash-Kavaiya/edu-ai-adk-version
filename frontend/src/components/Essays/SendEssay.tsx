@@ -71,7 +71,7 @@ export default function SendEssay() {
           ApiService.createPayload(
             userId,
             sessionId,
-            `Use the save_essay_feedback tool with the following data:\n${JSON.stringify(
+            `Save the essay evaluation result with the following data:\n${JSON.stringify(
               parsed
             )}`
           )
