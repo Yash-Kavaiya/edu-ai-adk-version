@@ -19,30 +19,27 @@ export function SessionProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     async function init() {
-      let storedUserId = localStorage.getItem("eduai_user_id");
-      let storedSessionId = localStorage.getItem("eduai_session_id");
+      console.log("Initializing session...");
 
+      // Get or generate userId (persisted)
+      let storedUserId = localStorage.getItem("eduai_user_id");
       if (!storedUserId) {
         storedUserId = crypto.randomUUID();
         localStorage.setItem("eduai_user_id", storedUserId);
       }
 
-      let finalSessionId = storedSessionId;
-
-      try {
-        const response = await ApiService.checkForSession(
-          storedUserId,
-          storedSessionId || ""
-        );
-        if (!response) throw new Error("Session not found");
-      } catch {
-        const newSession = await ApiService.initializeSession(storedUserId);
-        finalSessionId = newSession.sessionId;
-        localStorage.setItem("eduai_session_id", finalSessionId);
-      }
+      // Always create a new session
+      const { sessionId: newSessionId } = await ApiService.initializeSession(
+        storedUserId
+      );
 
       setUserId(storedUserId);
-      setSessionId(finalSessionId);
+      setSessionId(newSessionId);
+
+      console.log("Session initialized:", {
+        userId: storedUserId,
+        sessionId: newSessionId,
+      });
     }
 
     init();
