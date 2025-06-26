@@ -1,6 +1,6 @@
 import { RunPayload } from "@/types";
 
-const BASE_API_URL = "https://edu-ai-adk-659561392335.europe-west1.run.app";
+const BASE_API_URL = "http://localhost:8080";
 const APP_NAME = "orchestrator_agent";
 
 export class ApiService {
