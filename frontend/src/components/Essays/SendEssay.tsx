@@ -67,7 +67,7 @@ export default function SendEssay() {
       const parsed = parseADKResponse<EssayEvaluationResult>(data.response);
       if (parsed) {
         setResponse(parsed);
-        await ApiService.runAgent(
+        /*await ApiService.runAgent(
           ApiService.createPayload(
             userId,
             sessionId,
@@ -75,7 +75,7 @@ export default function SendEssay() {
               parsed
             )}`
           )
-        );
+        );*/
       }
     } catch (error) {
       console.error("Erro ao enviar redação:", error);
