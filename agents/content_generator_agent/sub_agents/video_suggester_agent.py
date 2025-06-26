@@ -3,7 +3,7 @@ from google.adk.tools import google_search
 
 video_suggester_agent = Agent(
     name="video_suggester_agent",
-    model="gemini-2.5-flash",
+    model="gemini-2.5-pro",
     description="Finds real YouTube videos for the topic using Google Search",
     tools=[google_search],
     instruction="""
