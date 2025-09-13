@@ -21,7 +21,7 @@ import {
 const CallToAction = () => {
   return (
     <section className="w-full py-16 md:py-24 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-pink-900/20"></div>
+      <div className="absolute inset-0 usa-gradient-primary opacity-90"></div>
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-gradient-to-r from-blue-600/10 to-purple-600/10 rounded-full blur-3xl"></div>
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-full blur-3xl"></div>
 
@@ -31,9 +31,9 @@ const CallToAction = () => {
             {/* Text content */}
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center justify-center lg:justify-start px-4 py-2 mb-6 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
-                <Globe className="w-4 h-4 mr-2 text-blue-400" />
-                <span className="text-sm font-medium text-white/80">
-                  Democratizing Education with Google ADK
+                <Star className="w-4 h-4 mr-2 text-white" />
+                <span className="text-sm font-bold text-white usa-text-shadow">
+                  🇺🇸 American Educational Excellence - Made in USA
                 </span>
               </div>
 

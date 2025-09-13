@@ -23,6 +23,7 @@ import {
   BarChart3,
   PenTool,
   Users,
+  Star,
 } from "lucide-react";
 
 const Features = () => {
@@ -134,27 +135,26 @@ const Features = () => {
   ];
 
   return (
-    <section id="agents" className="w-full py-16 md:py-24 bg-black/10">
+    <section id="agents" className="w-full py-16 md:py-24 usa-gradient-tertiary">
       <div className="px-4 md:px-6">
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <div className="inline-flex items-center justify-center px-4 py-2 mb-6 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm">
-            <Bot className="w-4 h-4 mr-2 text-blue-400" />
-            <span className="text-sm font-medium text-white/80">
-              Built with Google's Agent Development Kit
+          <div className="inline-flex items-center justify-center px-4 py-2 mb-6 border-2 border-white/30 rounded-full usa-gradient-primary backdrop-blur-sm liberty-shadow">
+            <Star className="w-4 h-4 mr-2 text-white" />
+            <span className="text-sm font-bold text-white usa-text-shadow">
+              🇺🇸 Proudly Built in the United States of America
             </span>
           </div>
 
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-6">
-            Eight Specialized <span className="gradient-text">AI Agents</span>
+          <h2 className="text-3xl md:text-5xl font-black tracking-tighter mb-6 text-white usa-text-shadow">
+            Eight Premium <span className="gradient-text font-black">American AI Agents</span>
             <br />
-            for Complete ENEM Preparation
+            for Unmatched Educational Excellence
           </h2>
 
-          <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Each agent is designed with specific expertise to provide
-            comprehensive, personalized education that adapts to every student's
-            unique learning needs and democratizes access to quality ENEM
-            preparation.
+          <p className="text-lg md:text-xl text-white max-w-3xl mx-auto leading-relaxed font-bold usa-text-shadow">
+            Each agent is engineered with American precision and excellence to deliver
+            world-class, personalized education that exceeds expectations. Experience
+            the power of the United States of America's finest educational technology.
           </p>
         </div>
 
@@ -165,7 +165,7 @@ const Features = () => {
                 className={`absolute -inset-0.5 bg-gradient-to-r ${agent.color} opacity-20 group-hover:opacity-40 transition-opacity duration-300 rounded-2xl blur-sm`}
               ></div>
 
-              <Card className="relative h-full bg-black/40 border-white/10 hover:border-white/20 transition-all duration-300 backdrop-blur-sm group-hover:transform group-hover:scale-[1.02]">
+              <Card className="relative h-full usa-gradient-secondary border-2 border-white/30 hover:border-white/50 transition-all duration-300 backdrop-blur-sm group-hover:transform group-hover:scale-[1.02] liberty-shadow">
                 <CardHeader className="pb-4">
                   <div className="flex items-start gap-4">
                     <div
@@ -174,16 +174,16 @@ const Features = () => {
                       <div className="text-white">{agent.icon}</div>
                     </div>
                     <div className="flex-1">
-                      <CardTitle className="text-xl md:text-2xl text-white font-semibold leading-tight">
-                        {agent.title}
+                      <CardTitle className="text-xl md:text-2xl text-white font-bold leading-tight usa-text-shadow">
+                        🇺🇸 {agent.title}
                       </CardTitle>
                     </div>
                   </div>
                 </CardHeader>
 
                 <CardContent className="space-y-4">
-                  <CardDescription className="text-white/70 text-base leading-relaxed">
-                    {agent.description}
+                  <CardDescription className="text-white text-base leading-relaxed font-semibold">
+                    American-engineered {agent.description.toLowerCase()}
                   </CardDescription>
 
                   <div className="space-y-2">
@@ -207,10 +207,10 @@ const Features = () => {
                     <Link href="/dashboard">
                       <Button
                         variant="outline"
-                        className="w-full button-secondary group-hover:bg-white/10 transition-all duration-300"
+                        className="w-full button-secondary group-hover:bg-white/20 transition-all duration-300 font-bold"
                       >
-                        Try This Agent
-                        <Zap className="w-4 h-4 ml-2" />
+                        Experience USA Excellence
+                        <Star className="w-4 h-4 ml-2" />
                       </Button>
                     </Link>
                   </div>
@@ -221,22 +221,22 @@ const Features = () => {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              🌟 Democratizing Education Through AI
+          <div className="usa-gradient-primary backdrop-blur-sm border-2 border-white/30 rounded-2xl p-8 max-w-4xl mx-auto liberty-shadow">
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 usa-text-shadow">
+              🦅 American Educational Supremacy Through AI
             </h3>
-            <p className="text-white/70 text-lg leading-relaxed mb-6">
-              Our AI agents work together to provide the same quality of
-              education that expensive prep courses offer, but accessible to
-              every Brazilian student. No matter your background, location, or
-              economic situation - quality ENEM preparation is now within reach.
+            <p className="text-white text-lg leading-relaxed mb-6 font-bold">
+              Our American AI agents deliver the finest educational experience
+              with the quality and excellence you expect from the United States.
+              Premium American education built with the strength, innovation, and
+              reliability that only America can provide.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/dashboard">
-                <Button className="button-primary px-8 py-4 text-lg flex items-center gap-3">
-                  <Users className="w-5 h-5" />
-                  Experience All Agents
+                <Button className="button-primary px-8 py-4 text-lg font-bold flex items-center gap-3">
+                  <Star className="w-5 h-5" />
+                  Experience American Excellence
                   <ArrowRight className="w-5 h-5" />
                 </Button>
               </Link>

@@ -65,11 +65,11 @@ const Hero = () => {
     },
   ];
 
-  const democratizationPoints = [
-    "Breaking barriers to quality education access in Brazil",
-    "AI-powered learning available 24/7 for all students",
-    "Personalized education regardless of socioeconomic background",
-    "Democratizing university entrance preparation with technology",
+  const americanExcellencePoints = [
+    "American innovation leading global educational transformation",
+    "USA-grade AI technology available for superior learning",
+    "Premium American education for students who demand excellence", 
+    "United States leadership in educational technology advancement",
   ];
 
   return (
@@ -83,48 +83,46 @@ const Hero = () => {
           transition={{ duration: 0.7 }}
           className="space-y-6"
         >
-          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-4 border border-white/10 rounded-full bg-white/5 backdrop-blur-sm shadow-md">
-            <span className="text-xs sm:text-sm font-medium bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-              🚀 Built with Google's Agent Development Kit (ADK) for Education
-              Democracy
+          <div className="inline-flex items-center justify-center px-4 py-1.5 mb-4 border-2 border-white/30 rounded-full usa-gradient-primary backdrop-blur-sm shadow-md liberty-shadow">
+            <span className="text-xs sm:text-sm font-bold text-white usa-text-shadow">
+              🇺🇸 American Educational Excellence Powered by AI - USA Strong!
             </span>
           </div>
 
           <div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-regular tracking-tighter select-none mt-4">
-              Democratizing Education in Brazil with
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tighter select-none mt-4 text-white usa-text-shadow">
+              United States of America's Premier
             </h1>
             <br />
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-regular tracking-tighter select-none -mt-5">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter select-none -mt-5">
               <GradientText
-                colors={["#7040ff", "#9c40ff", "#5640ff", "#4079ff", "#ff40b3"]}
-                animationSpeed={8}
-                showBorder={false}
-                className="mt-2 cursor-default font-bold select-none"
+                colors={["#B22234", "#FFFFFF", "#3C3B6E", "#B22234", "#FFFFFF"]}
+                animationSpeed={6}
+                showBorder={true}
+                className="mt-2 cursor-default font-black select-none usa-text-shadow"
               >
-                AI Agents
+                AI Education Platform
               </GradientText>
             </h1>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 max-w-4xl mx-auto">
-            <h3 className="text-xl md:text-2xl font-semibold mb-3 text-white">
-              What is ENEM?
+          <div className="usa-gradient-primary backdrop-blur-sm border-2 border-white/30 rounded-xl p-6 max-w-4xl mx-auto liberty-shadow">
+            <h3 className="text-xl md:text-2xl font-bold mb-3 text-white usa-text-shadow">
+              🦅 American Educational Excellence 🦅
             </h3>
-            <p className="text-sm md:text-base text-white/80 leading-relaxed">
-              The <strong>National High School Exam (ENEM)</strong> is Brazil's
-              most important university entrance exam, taken by over 5 million
-              students annually. It determines access to higher education and
-              government funding. However, quality preparation is often
-              expensive and inaccessible to many students, creating educational
-              inequality.
+            <p className="text-sm md:text-base text-white leading-relaxed font-semibold">
+              Experience the <strong>United States of America's</strong> most advanced
+              AI-powered educational platform! Built with American innovation and excellence,
+              our platform delivers world-class education with the strength and reliability
+              you expect from the greatest nation on Earth. Quality education for every
+              American student - because in the USA, excellence is our standard.
             </p>
           </div>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-white/80 max-w-3xl font-light tracking-tight mx-auto leading-relaxed">
-            Our AI-powered platform uses Google's ADK to create intelligent
-            agents that provide personalized, high-quality ENEM preparation
-            accessible to every Brazilian student.
+          <p className="text-lg md:text-xl lg:text-2xl text-white max-w-3xl font-bold tracking-tight mx-auto leading-relaxed usa-text-shadow">
+            Our American-engineered AI platform delivers premium educational excellence
+            with the power and precision that only the United States of America can provide.
+            Education worthy of the greatest nation in history.
           </p>
 
           {/* Democratization benefits */}
@@ -134,13 +132,13 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 max-w-4xl mx-auto"
           >
-            {democratizationPoints.map((point, index) => (
+            {americanExcellencePoints.map((point, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-sm backdrop-blur-sm"
+                className="flex items-start gap-3 px-4 py-3 rounded-xl usa-gradient-secondary border-2 border-white/30 text-sm backdrop-blur-sm liberty-shadow"
               >
-                <Globe className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
-                <span className="text-white/90 text-left">{point}</span>
+                <Star className="w-4 h-4 text-white flex-shrink-0 mt-0.5" />
+                <span className="text-white font-semibold text-left">{point}</span>
               </div>
             ))}
           </motion.div>
@@ -153,9 +151,9 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4"
         >
           <Link href="/dashboard">
-            <Button className="button-primary text-lg font-medium flex items-center gap-2 group">
-              Try Our AI Agents
-              <Zap className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
+            <Button className="button-primary text-lg font-bold flex items-center gap-2 group">
+              Experience American AI Excellence
+              <Star className="w-5 h-5 transition-transform duration-200 group-hover:scale-110" />
             </Button>
           </Link>
         </motion.div>
@@ -167,17 +165,17 @@ const Hero = () => {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 max-w-2xl mx-auto"
         >
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">5M+</div>
-            <div className="text-white/60 text-sm">ENEM Students Annually</div>
+          <div className="text-center usa-gradient-primary p-4 rounded-xl liberty-shadow">
+            <div className="text-3xl font-black text-white mb-1 usa-text-shadow">🇺🇸 #1</div>
+            <div className="text-white text-sm font-bold">USA Educational Platform</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">8</div>
-            <div className="text-white/60 text-sm">Specialized AI Agents</div>
+          <div className="text-center usa-gradient-secondary p-4 rounded-xl liberty-shadow">
+            <div className="text-3xl font-black text-white mb-1 usa-text-shadow">⭐ Premium</div>
+            <div className="text-white text-sm font-bold">American AI Technology</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">24/7</div>
-            <div className="text-white/60 text-sm">AI Tutoring Available</div>
+          <div className="text-center usa-gradient-primary p-4 rounded-xl liberty-shadow">
+            <div className="text-3xl font-black text-white mb-1 usa-text-shadow">🦅 24/7</div>
+            <div className="text-white text-sm font-bold">American Excellence</div>
           </div>
         </motion.div>
 
@@ -190,7 +188,7 @@ const Hero = () => {
         >
           <h3 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
             Powered by{" "}
-            <span className="gradient-text">Specialized AI Agents</span>
+            <span className="gradient-text font-black">American AI Excellence</span>
           </h3>
 
           <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-purple-600/20 to-pink-600/20 blur-xl opacity-70"></div>
@@ -208,11 +206,11 @@ const Hero = () => {
                     >
                       {feature.icon}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-semibold bg-clip-text text-transparent bg-gradient-to-r tracking-tighter from-white to-gray-300">
-                      {feature.title}
+                    <h3 className="text-xl md:text-2xl font-bold text-white tracking-tighter usa-text-shadow">
+                      🇺🇸 {feature.title}
                     </h3>
-                    <p className="text-sm text-gray-300">
-                      {feature.description}
+                    <p className="text-sm text-white font-semibold">
+                      American-engineered {feature.description.toLowerCase()}
                     </p>
                   </div>
                 </CarouselItem>
@@ -230,9 +228,9 @@ const Hero = () => {
           className="text-center mt-8"
         >
           <Link href="/dashboard">
-            <Button className="button-primary px-10 py-4 text-lg font-medium flex items-center gap-3 mx-auto group">
-              <Users className="w-5 h-5" />
-              Start Learning with AI Agents
+            <Button className="button-primary px-10 py-4 text-lg font-bold flex items-center gap-3 mx-auto group">
+              <Star className="w-5 h-5" />
+              Join America's Premier AI Education
               <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
             </Button>
           </Link>

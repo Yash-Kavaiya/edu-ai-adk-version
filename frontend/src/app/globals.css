@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #171717;
-  --color-foreground: #FAFAFA;
-  --color-card: #09090B;
-  --color-card-foreground: #FAFAFA;
-  --color-popover: #09090B;
-  --color-popover-foreground: #FAFAFA;
-  --color-primary: #4338CA;
-  --color-primary-foreground: #18181B;
-  --color-secondary: #27272A;
-  --color-secondary-foreground: #FAFAFA;
-  --color-muted: #27272A;
-  --color-muted-foreground: #A1A1AA;
-  --color-accent: #9457FF;
-  --color-accent-foreground: #18181B;
-  --color-destructive: #7F1D1D;
-  --color-destructive-foreground: #FAFAFA;
-  --color-border: #27272A;
-  --color-input: #27272A;
-  --color-ring: #D4D4D8;
+  --color-background: #1e3a8a;
+  --color-foreground: #FFFFFF;
+  --color-card: #3C3B6E;
+  --color-card-foreground: #FFFFFF;
+  --color-popover: #3C3B6E;
+  --color-popover-foreground: #FFFFFF;
+  --color-primary: #B22234;
+  --color-primary-foreground: #FFFFFF;
+  --color-secondary: #FFFFFF;
+  --color-secondary-foreground: #1e3a8a;
+  --color-muted: #6b7280;
+  --color-muted-foreground: #9ca3af;
+  --color-accent: #B22234;
+  --color-accent-foreground: #FFFFFF;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #FFFFFF;
+  --color-border: #e5e7eb;
+  --color-input: #f3f4f6;
+  --color-ring: #B22234;
   --radius: 0.75rem;
   
   --animate-gradient: gradient 8s linear infinite;
@@ -39,8 +39,11 @@ body {
   font-feature-settings: "rlig" 1, "calt" 1;
   min-height: 100vh;
   background-image: 
-    radial-gradient(circle at 15% 50%, rgba(78, 36, 125, 0.2) 0%, transparent 40%),
-    radial-gradient(circle at 85% 30%, rgba(67, 56, 202, 0.2) 0%, transparent 50%);
+    linear-gradient(135deg, #1e3a8a 0%, #B22234 50%, #FFFFFF 100%),
+    radial-gradient(circle at 20% 80%, rgba(178, 34, 52, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(60, 59, 110, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  background-attachment: fixed;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -48,60 +51,67 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #c084fc, #ec4899, #6366f1);
+  background: linear-gradient(to right, #B22234, #FFFFFF, #3C3B6E);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-weight: bold;
 }
 
 .glass-card {
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(178, 34, 52, 0.9), rgba(60, 59, 110, 0.9));
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 1rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px -12px rgba(178, 34, 52, 0.4);
 }
 
 .glass-card-dark {
-  background-color: transparent;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.8), rgba(178, 34, 52, 0.6));
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px -8px rgba(30, 58, 138, 0.3);
   transition: all 0.3s ease;
 }
 
 .button-primary {
-  background-color: var(--color-primary);
+  background: linear-gradient(135deg, #B22234, #dc2626);
   color: white;
-  font-weight: 500;
+  font-weight: 700;
   padding: 1.5rem 2rem;
   border-radius: 9999px;
   font-size: 1.15rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px -8px rgba(178, 34, 52, 0.4);
   transition: all 0.3s ease;
   cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .button-primary:hover {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #dc2626, #B22234);
+  box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.5);
+  transform: scale(1.05) translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .button-secondary {
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border: 2px solid #3C3B6E;
   border-radius: 9999px;
   padding: 1.5rem 2rem;
-  color: white;
+  color: #1e3a8a;
   font-size: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  box-shadow: 0 8px 16px -4px rgba(60, 59, 110, 0.3);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .button-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #FFFFFF, rgba(255, 255, 255, 0.9));
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 12px 24px -6px rgba(60, 59, 110, 0.4);
 }
 
 .button-tertiary {
@@ -152,11 +162,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .app-background {
-  background-color: #0c0c10;
+  background: linear-gradient(135deg, #1e3a8a 0%, #B22234 50%, #FFFFFF 100%);
   min-height: 100vh;
   background-image: 
-    radial-gradient(circle at 15% 50%, rgba(78, 36, 125, 0.2) 0%, transparent 40%),
-    radial-gradient(circle at 85% 30%, rgba(67, 56, 202, 0.2) 0%, transparent 50%);
+    radial-gradient(circle at 25% 75%, rgba(178, 34, 52, 0.4) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(60, 59, 110, 0.4) 0%, transparent 50%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.05) 50%, transparent 50%);
+  background-attachment: fixed;
 }
 
 .essay-section-background {
@@ -313,7 +325,68 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .text-glow {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(178, 34, 52, 0.5);
+}
+
+/* American Flag Stripes Pattern */
+.usa-stripes {
+  background-image: repeating-linear-gradient(
+    0deg,
+    #B22234 0px,
+    #B22234 20px,
+    #FFFFFF 20px,
+    #FFFFFF 40px
+  );
+}
+
+/* Stars Pattern Background */
+.usa-stars {
+  background-color: #3C3B6E;
+  background-image: 
+    radial-gradient(circle at 12.5% 12.5%, #FFFFFF 2px, transparent 2px),
+    radial-gradient(circle at 37.5% 12.5%, #FFFFFF 2px, transparent 2px),
+    radial-gradient(circle at 62.5% 12.5%, #FFFFFF 2px, transparent 2px),
+    radial-gradient(circle at 87.5% 12.5%, #FFFFFF 2px, transparent 2px),
+    radial-gradient(circle at 25% 37.5%, #FFFFFF 2px, transparent 2px),
+    radial-gradient(circle at 50% 37.5%, #FFFFFF 2px, transparent 2px),
+    radial-gradient(circle at 75% 37.5%, #FFFFFF 2px, transparent 2px);
+  background-size: 100px 50px;
+}
+
+/* Patriotic Gradient Backgrounds */
+.usa-gradient-primary {
+  background: linear-gradient(135deg, #B22234 0%, #FFFFFF 50%, #3C3B6E 100%);
+}
+
+.usa-gradient-secondary {
+  background: linear-gradient(45deg, #3C3B6E 0%, #B22234 100%);
+}
+
+.usa-gradient-tertiary {
+  background: radial-gradient(circle at center, #FFFFFF 0%, #B22234 50%, #3C3B6E 100%);
+}
+
+/* American Pride Text Effects */
+.usa-text-shadow {
+  text-shadow: 
+    2px 2px 0px #B22234,
+    4px 4px 0px #3C3B6E,
+    6px 6px 8px rgba(0, 0, 0, 0.3);
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.usa-border {
+  border: 3px solid;
+  border-image: linear-gradient(45deg, #B22234, #FFFFFF, #3C3B6E) 1;
+}
+
+/* Liberty Bell and Eagle inspired shadows */
+.liberty-shadow {
+  box-shadow: 
+    0 0 20px rgba(178, 34, 52, 0.5),
+    0 0 40px rgba(60, 59, 110, 0.3),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 /* 3D Transform Utilities */

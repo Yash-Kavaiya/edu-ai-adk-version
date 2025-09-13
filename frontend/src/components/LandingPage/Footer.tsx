@@ -11,17 +11,18 @@ import {
   BarChart3,
   Users,
   Sparkles,
+  Star,
 } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-16 bg-black/20 border-t border-white/10">
+    <footer className="w-full py-16 usa-gradient-secondary border-t-4 border-white/50">
       <div className="container px-4 md:px-6">
         {/* Top section with branding and CTA */}
         <div className="text-center mb-12 max-w-4xl mx-auto">
-          <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Democratizing ENEM Education with{" "}
-            <span className="gradient-text">AI Agents</span>
+          <h3 className="text-3xl md:text-4xl font-black text-white mb-4 usa-text-shadow">
+            American Educational Excellence with{" "}
+            <span className="gradient-text font-black">USA AI Agents</span>
           </h3>
           <p className="text-white/70 text-lg mb-6 leading-relaxed">
             Built with Google's Agent Development Kit to break educational
